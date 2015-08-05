@@ -1,2 +1,2 @@
 # Notes-on-GAE
-My notes from the Udacity Introduction to Programming Nanodegree for Google App Engine deployment.
+My Stage 4 course submission files from the Udacity Introduction to Programming Nanodegree for Google App Engine deployment.
