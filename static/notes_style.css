@@ -1,0 +1,169 @@
+/*-- This file contains the submission material for the Udacity Nanodegree
+Introduction to Programming by Jes H.
+
+Here goes my CSS for html notes in separate file.
+
+Palette:
+pale yellow : #cbca70;
+dark blue   : #23324c;
+light blue  : #9aadcb;
+pale blue   : #3a547f;
+code pale   : #4b658f;
+code light  : #eae981;
+code border : #6d87af;
+tomato      : #ff6347;
+firebrick   : #b22222;
+dimgrey     : #696969;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Helvetica;
+  max-width: 750px;
+  /* display: flex; /* Enable to eliminate the block behaviour of div! */
+}
+
+.lesson {
+  color: #cbca70;
+  background-color: #23324c;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.concept {
+  background-color: #3a547f;
+  padding: 4px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.concept-description {
+  margin: 6px;
+}
+
+.addmargin {
+  margin: 10px;
+}
+
+.toplink {
+  text-align: right;
+}
+
+.thumbnail {
+  height: 30px;
+}
+
+.screenshot {
+  width: 100%;
+}
+
+span.code {
+  font-family: Consolas;
+  font-size: 14px;
+  color: #eae981;
+  background-color: #4b658f;
+  padding: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #6d87af;
+  /*font-weight: bold;*/
+}
+
+.coolheading {
+  text-align: center;
+  font-family: 'Oswald', Helvetica, sans-serif;
+  font-size: 80px;
+  transform: skewY(-8deg);
+  letter-spacing: 8px;
+  word-spacing: -4px;
+  color: #ff6347;
+  text-shadow:
+    -1px -1px 0 #b22222,
+    -2px -2px 0 #b22222,
+    -3px -3px 0 #b22222,
+    -4px -4px 0 #b22222,
+    -5px -5px 0 #b22222,
+    -6px -6px 0 #b22222,
+    -7px -7px 0 #b22222,
+    -8px -8px 0 #b22222,
+    -30px 20px 40px #696969
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #9aadcb;
+}
+
+a.navbar:link, a.navbar:visited {
+    display: block;
+    width: 145px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3a547f;
+    text-align: center;
+    padding: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.navbar:hover, a.navbar:active {
+    background-color: #9aadcb;
+}
+
+h1 {
+  color: #23324c;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: #9aadcb;
+  font-size: 20px;
+  margin: 4px;
+  text-align: left;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+  list-style-image: none;
+  padding-left: 1.2em;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li.navbar {
+  float: left;
+}
+
+table, th, td {
+  border: 1px solid #23324c;
+  border-collapse: collapse;
+/*  width: 70%; */
+}
+
+th, td {
+  vertical-align: top;
+  text-align: left;
+  padding:10px;
+}
+
+table#t34a {
+    width: 100%;
+
+}

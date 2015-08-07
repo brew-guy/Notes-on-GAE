@@ -1,0 +1,1602 @@
+{% extends "notes_header.html" %}
+{# This file contains the submission material for the Udacity Nanodegree
+Introduction to Programming by Jes H.
+This is the extended Jinja template containing stage note blocks #}
+
+{% block stage1 %}
+<!-- First main div element contains my Stage 1, Lesson 1 notes -->
+<div class="lesson">
+  <h2 class="addmargin">Lesson 1.1: The Basics of the Web and HTML</h2>
+  <!-- Subsequent notes also get enclosed in their own div element -->
+  <div class="concept">
+    <h3>Webpages</h3>
+    <div class="concept-description">
+      <p>
+        Text doc written using HTML – hypertext markup language.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Coding</h3>
+    <div class="concept-description">
+      <p>
+        Telling computers what to do in a language they understand – e.g. through HTML.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Computers are stupid</h3>
+    <div class="concept-description">
+      <p>
+        Coding in language with strict rules implies the computer that interprets is prone to misunderstand when the human coder makes errors. There's no "human factor" that understands the mistake and the computer act stupid when interpreting an error.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Look it up</h3>
+    <div class="concept-description">
+      <p>
+        Too much detail. No problem, focus on the larger ideas and look up the details (correct html tags etc.) on the internet.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>HTML lingo</h3>
+    <div class="concept-description">
+      <p>
+        Tags (some require closing brackets, some don't), inline tags, block tags, void tags, elements, attributes.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>HTML structure</h3>
+    <div class="concept-description">
+      <p>
+        Doctype, head (meta-data, <a target="_blank" href="http://www.w3.org/Style/CSS/">css</a>, <a target="_blank" href="http://www.w3schools.com/js/">javascript</a>), body (the fun stuff).
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Images</h3>
+    <div class="concept-description">
+      <p>
+        Img tags are <img src="http://dbastatic.dk/pictures/pictures/52/5d/95e7-e7f7-4d80-bc74-12dfc60b09e2.jpg?preset=thumbnail" alt="Inliners. A-ha. A-hahaha :-|" class="thumbnail"> inline (as opposed to block elements like those defined with <span class="code">&lt;div&gt;</span> etc.)
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 1, Lesson 2 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 1.2: Creating a Structured Document</h2>
+  <div class="concept">
+    <h3>Structure, structure, structure</h3>
+    <div class="concept-description">
+      <p>
+        HTML is the language that provides the backbone  of the webpage's content in a branched order - the so-called DOM or Document Object Model. This clever approach makes it highly adaptable in a controlled way by applying formatting to the backbone elements separately - namely via CSS. It enables me to apply a complete "style make-over" to collective parts of a webpage with minimum effort and time use.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Styling</h3>
+    <div class="concept-description">
+      <p>
+        On such a "style make-over" the outputted webpage looks different in the browser. The HTML (structure) remains unchanged while the CSS (style) changes and thus controls how the elements of the page appear on screen.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Boxification</h3>
+    <div class="concept-description">
+      <p>
+        It appears that all elements in HTML is contained in rectangular boxes - their dimensions and other parameters may be defined via separate styles. This is another clever part of HTML as it enables easy page adaptation to various screen sizes, browsers and digital platforms in general.<br>
+        Boxes are created in HTML with the <span class="code">&lt;div&gt;</span>-tag (but not around the <span class="code">&lt;span&gt;</span>-tag). A box inside a box is done by enclosing one <span class="code">&lt;div&gt;</span>-tag inside another. Clever! So when I break down a webpage as it looks in the browser and "read" the invisible "boxes", I can now copy-cat these "boxes" into my own HTML by building a hierarchy of <span class="code">&lt;div&gt;</span>-tags.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 1, Lesson 3 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 1.3: Adding CSS Style and HTML Structure</h2>
+  <div class="concept">
+    <h3>The missing link</h3>
+    <div class="concept-description">
+      <p>
+        Styling by CSS is linked to HTML elements by labeling the HTML elements (tags) with <code>class</code> (and <code>id</code>?) attributes. This must be the stuff that makes the magic happen.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Cascading and inheritance</h3>
+    <div class="concept-description">
+      <p>
+        HTML structure is DOM, and CSS is applied cascading throughout the DOM in turn dictating the order of the applied styling.  The CSS for my HTML page can be "called" or referenced into my HTML from a separately saved CSS file. It can also be written directly into the beginning of my HTML. I guess the latter is great for smaller projects while the former seems very useful for big projects with tons of HTML files all calling the same external CSS file.
+      </p>
+      <p>
+        CSS applied to an element is inherited to the descendants of that element, but there are differences in how e.g. text- and box-properties are inherited. This seems awesome and it all gets more logical and useful at this stage. There's just the thing about remembering all of this...
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Repetition</h3>
+    <div class="concept-description">
+      <p>
+        Programming seems a lot about avoiding unnecessary repetition. CSS together with the inherent structures of HTML and CSS are very efficient at that. E.g. make one CSS file and call this from a bunch of HTML files to easy apply a uniform layout to all pages in no time. The rules of inheritance in CSS also helps programmers write less code because they can simply apply style to a higher-level or ancestor-level element.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 1 learnings I got on top -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Bonus take-aways from Stage 1 lessons</h2>
+  <div class="concept">
+    <!-- Bonus learnings from Stage 1 -->
+    <h3>Bonus learning 1</h3>
+    <div class="concept-description">
+      <p>
+        I learned how to make use of the browser's Developer Tool (source HTML+CSS) to "read" (mouse-over) HTML elements and see their respective boxes in real-time on screen. That was an eye-opener!
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Bonus learning 2</h3>
+    <div class="concept-description">
+      <p>
+        The concept of keeping content and style separate seems to me somewhat similar to having unformatted text in MS Word with separate formatting applied in separate "Styles" templates, which likewise enables swift changing of a full Word document between various lay-outs (incl. colors schemes, line spacing, font, font size etc.).
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Bonus learning 3</h3>
+    <div class="concept-description">
+      <p>
+        I learned how to set-up Sublime Text. I now have my own humble developer environment. Success! <span class="code">\(^_^)/</span> It was easy to make it recognize and color code HTML syntax but it took me a while to make it view my code in a browser with a click (Sublime Text 3 on Windows 8).
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Bonus learning 4</h3>
+    <div class="concept-description">
+      <p>
+        There were links to very resourceful webpages I surely will be going back to often for help. <a target="_blank" href="http://stackoverflow.com/">Stackoverflow</a>, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web">MDN CSS and HTML reference</a>, <a target="_blank" href="https://css-tricks.com/how-css-selectors-work/">CSS-tricks</a>, <a target="_blank" href="http://validator.w3.org/#validate_by_input">W3C HTML Validation</a>.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+   <!-- Things I didn't quite grasp at this level -->
+    <h3>Say what?</h3>
+    <div class="concept-description">
+      <p>
+        One of the earlier lessons made me fiddle with styles of some HTML- and CSS-generated circles. I don't understand what makes the circles circular, but hopefully that'll come...
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock stage1 %}
+
+{% block stage2 %}
+<!-- Stage 2, Lesson 1 notes -->
+<div class="lesson">
+  <h2 class="addmargin">Lesson 2.1: Introduction to serious programming</h2>
+  <div class="concept">
+    <h3>Computer programming</h3>
+    <div class="concept-description">
+      <p>
+        Programming is the series of instructions fed to a computer to make it do what I want it to. Without programming, the computer does nothing and is even less useful than a toaster. I will be programming in Python language and the Python interpreter translates the code I write into special machine instructions that the computer understands. There are many other programming languages apart from Python. Computer programs come in endless forms and with just as many purposes. Some examples are web browsers, mobile phone apps, Python programs written during this course and even the Python interpreter itself.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Programming language</h3>
+    <div class="concept-description">
+      <p>
+        The first program of the course was done in Python and was a simple one-line where I feed the Python interpreter a command and an expression. Using the print command, I was able to print to screen a sum of calculation of the amount of minutes in seven weeks. Second I learned that Python treats numbers as integers until at least one of the numbers in an expression is made decimal.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Computer science – natural vs. programming languages</h3>
+    <div class="concept-description">
+      <p>
+        Although computer science sounds equal to computer programming at first sight, it is not the same. Computer science has theoretical concepts to it that are not necessarily needed for programming. They do help understanding the background for why computers and programming languages are built as they are. Examples of theoretical concepts: Ambiguity – natural human languages are easily misinterpreted while programming languages are not. Verbosity – programming language can compactly describe the required details that would take long sentences to describe with natural languages. On the other hand, programming languages are less flexible and have to follow a set syntax strictly. Sentences in human language may contain errors and still be interpreted by other humans, while this would never work under a programming language syntax.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Computer grammar - syntax and validity</h3>
+    <div class="concept-description">
+      <p>
+        Many computer language sentences follow a grammar dictated by the Backus-Naur form, a replacement grammar where <em>Non-terminal</em> sentence elements may be replaced until only <em>Terminal</em> elements are left at which point the sentence must end. This language grammar can also be called the syntax and it dictates when a programming sentence or arithmetic expression must end to be readable by the interpreter. The code will not run if not adhering to the syntax, otherwise it would open up for unpredictable results. The Python syntax is very picky with space indentation, case sensitivity and arithmetic expression rules. A Python "expression" is a legal Python statement. For example: <span class="code">print 1 + 1</span> is a valid expression, but <span class="code">print 1 +</span> (without a number at the end) is not.
+      </p>
+      <p>
+        Grace Hopper insinuated that computers could do more than arithmetic. I hope it's true or this course may not be what I signed up for :)
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 2, Lesson 2 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 2.2: Variables and Strings</h2>
+  <div class="concept">
+    <h3>Code readability – the variable</h3>
+    <div class="concept-description">
+      <ul>
+        <li>What is a variable?
+          <ul>
+            <li>A variable is basically a name that refers to a value. The value stored or assigned to the variable may change during the run of my code. This is what makes them variables.</li>
+          </ul>
+        </li>
+        <li>What does it mean to assign a value to a variable?
+          <ul>
+            <li>A value is assigned to this name by writing an assignment statement in the form of 'Name = Expression'. The variable called Name hereafter contains/holds the Expression, so whenever referring to the variable in the code, the Python interpreter will actually use the value that is contained therein. A few simple rules for naming of variables apply – must start with a letter or an underscore. It greatly increases code readability to assign values to cleverly named variables.</li>
+          </ul>
+        </li>
+        <li>What is the difference between what the equals = means in math versus in programming. What's the difference between this: <span class="code">2 + 3 = 5</span> and this: <span class="code">my_variable = 5</span>?
+          <ul>
+            <li>The variable holding a value in Python is not the same as a usual math equation even though they are written in very much the same way. The Python instruction means that the value on the right side of the equal sign is assigned or put into the named variable on the left side of the equal sign. The variable can change as the code executes and thereby start out from a base value which then changes over time.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Defining variables</h3>
+    <div class="concept-description">
+      <p>
+        A value must be assigned to a variable before it can be used in Python. Any variable don't just hold no value or the value 0, so Python will break the program and return an error if trying to refer to a variable that was never assigned a value to begin with.
+      </p>
+      <p>
+        When Python assigns a value to the viariable, it evaluates the equation on the right side of the equal sign first and then moves the result to the variable name on the left side of the equal sign.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Strings</h3>
+    <div class="concept-description">
+      <p>
+        Strings are text contained within a set of single- or double quotes (<span class="code">''</span> or <span class="code">""</span>). One additional method of enclosing strings is within triple quotes (<span class="code">'''</span> or <span class="code">"""</span>) which can hold strings broken over several lines. Variables can also hold strings just as they can hold numbers. Variables can only hold one data type at a time though, so strings and numbers cannot be mixed. If a number is enclosed by quotes it will be treated like a string. Two strings can be concatenated into one new string just by using the <span class="code">+</span> sign as an operator between the strings. Strings can be multiplied with the <span class="code">*</span> sign to repeat the string a given amount of times. String concatenation can be useful when working with html because tags can be concatenated with text to build working html code.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Indexing strings</h3>
+    <div class="concept-description">
+      <p>
+        Indexing of strings is used to extract individual letters or parts of a string. Syntax for the indexing is <span class="code">s[i]</span> which outputs the character that matches the index i of the string s. Indexing starts with 0 and this index point to the first letter of the string. Negative index numbers counts back from last letter in the string starting with -1 for the last letter. Sub-sequences of the string can be returned in the same way by applying syntax <span class="code">string[i:j]</span>. Leaving the i and/or j index empty will select all letters from the beginning and/or end of the string.
+      </p>
+      <p>
+        Extracting sub-sequences of strings by indexing is useful when working on html since tags can be filtered out and only the actual text extracted from the html code.
+      </p>
+     </div>
+  </div>
+ <div class="concept">
+    <h3>Finding a sub-string inside strings</h3>
+    <div class="concept-description">
+      <p>
+        Syntax for finding a string within a string is a little odd as the find operator is appended to the search string: <span class="code">s.find(t)</span> where s is the string to be searched and t is the target string to be located. The function will return the index of the first occurrence of string t in string s. -1 is returned if t not found in s. The find operator takes one more parameter: <span class="code">s.find(t,i)</span> and this enables us to start the search for string t after index i in string s. This again should enable us to find more than the first occurrence of t in s given there are more occurrences. When the parameter i is set higher than the index of the last occurrence of t in s, the output will be -1 signaling there is no more to be found in s. This will be powerful when combined with a loop!
+      </p>
+    </div>
+  </div>
+ <div class="concept">
+    <h3>Abstract thinking</h3>
+    <div class="concept-description">
+      <p>
+        Imagining what a piece of code may produce as a result is abstract thinking. Letting my brain keep track of the values stored in the variables and the operations performed on strings etc. as the code runs is abstract but good practice for insight into how the interpreter works.
+      </p>
+      <p>
+        Applying negative index counting on sub-sections of strings is more functional than counting in absolute index positions when it comes to separating html into opening tags, closing tags and text. The reason being negative indexing will split html for any length of text thus making it a <em>general solution</em> as opposed to a <em>specific solution</em>.
+      </p>
+    </div>
+  </div>
+ <div class="concept">
+    <h3>Bugs</h3>
+    <div class="concept-description">
+      <p>
+        When code runs off the trail, does not behave as expected and returns an error. A common cause of bugs in code are <em>edge cases</em> e.g. where string indexing gives non-meaningful results.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 2, Lesson 3 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 2.3: Input -> Function -> Output</h2>
+  <div class="concept">
+    <h3>Functions</h3>
+    <div class="concept-description">
+      <p>
+        Also referred to as <em>procedures</em>. They are separate pieces of code that will not run until called from the main program. Functions can take <em>parameters</em> for <u>input</u> such as strings and expressions which may then be processed by the function to create the return value or <u>output</u> of the function. Functions are <u>created</u> or defined with the syntax <span class="code">def function_name(arg1,arg2…etc.):</span> and the function will output a result when a <span class="code">return</span> command is reached inside the function's code. It appears that space indentation of all subsequent lines of code after <span class="code">def</span> is important. When indentation is back to 0 again the function ends. A function does not need a <span class="code">return</span> statement to be functional, but it will not produce an output if a <span class="code">return</span> is not included! To <u>call or use</u> the function defined, it must be called from the main code by writing its name and giving the exact required amount of arguments, e.g. <span class="code">print function_name("Count to three", 3)</span>. What happens upon calling a function from the main code is that whatever arguments ("Count to three", 3) are passed to the function will be assigned to the argument variables (<em>arg1, arg2</em>) of the function. Variables used inside function code are not shared or overlapping with variables used in the main code.
+      </p>
+      <p>
+        Functions seems to work like a sort of new Python command that I added to the common "dictionary" of known Python commands but I can use my function only when it's defined in my program. Since functions work like any other Python command, they fit nicely into the syntax. I can call a function and use its output with any other command. I can even nest one call to a function as a parameter for another function – procedure composition. All this functionality of functions is highly usable in terms of avoiding repetitions because it automates processing of data following a controlled set of instructions and at the same time allows for endless variations on the input fed to the function. Functions spre the porgrammer to repeat the same set of instructions over and over in his code.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 2, Lesson 4 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 2.4: Control Flow &amp; Loops: If and While</h2>
+  <div class="concept">
+    <h3>Making decision</h3>
+    <div class="concept-description">
+      <p>
+        <em>Comparison</em> operators (or Boolean operators) in Python are <span class="code">&lt;</span>, <span class="code">&gt;</span>, <span class="code">==</span>, <span class="code">!=</span>, <span class="code">&lt;&gt;</span>, <span class="code">&lt;=</span>, <span class="code">&gt;=</span> are used to compare values and variables. We need a double equal (<span class="code">==</span>) for Boolean comparisons because the single equal (<span class="code">=</span>) means <em>assignment</em> in Python. Two or more comparisons can be evaluated in succession with the <span class="code">or</span>, <span class="code">and</span>, <span class="code">not</span> <em>logical</em> operators. The output of a Boolean comparison is a <span class="code">True</span> or <span class="code">False</span> return code that can be used to make a decision about the further flow of the program. This is done by applying the <span class="code">if</span> and <span class="code">else</span> commands to the result of the decision result.
+      </p>
+      <p>
+        Another useful way to exploit Boolean comparison is creating a loop with the <span class="code">while</span> command which makes the same code run over and over until the test expression returns a <span class="code">False</span>. The variable tested should probably change during the loops or the test may never return <span class="code">False</span> causing the <span class="code">while</span> loop to never end – it could be desired but would call for a break of the program somehow else. Breaking an infinite <span class="code">while</span> loop or breaking the loop before the test expression evaluates to <span class="code">False</span> can be done with the <span class="code">break</span> command.
+      </p>
+      <p>
+        On par with functions it's important to indent any code that must run under the <span class="code">if</span>, <span class="code">else</span> and <span class="code">while</span> blocks.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Procedural thinking</h3>
+    <div class="concept-description">
+      <p>
+        Applying <span class="code">if</span> and <span class="code">else</span> works well and is logical in many situations, but for evaluation or decision making based on larger amounts of variables the <span class="code">if</span> <span class="code">else</span> structure gets daunting. Instead, reusing functions and nesting function calls inside other function calls or commands can alleviate such unmanageable structures and minimize repetition (which we like very much :-). Such procedural thinking and code execution results in more elegant solutions. The concept was nicely illustrated with the solution to the function that identified the biggest among three input values:
+      </p>
+      <table>
+        <tr>
+          <th>Procedural</th>
+          <th></th>
+          <th>Clumsy</th>
+        </tr>
+        <tr>
+          <td>
+<pre>
+def bigger(a,b):
+  if a &lt; b:
+    return a
+  else:
+    return b
+
+def biggest(a,b,c):
+  return bigger(bigger(a,b),c)
+
+print(biggest(1,2,3))
+</pre>
+          </td>
+          <td>vs.</td>
+          <td>
+<pre>
+def biggest(a,b,c):
+  if a&lt;b:
+    if a&lt;c:
+      return a
+    else:
+      return c
+  else:
+    if b&lt;c:
+      return b
+    else:
+      return c
+
+print(biggest(1,2,3))
+</pre>
+          </td>
+        </tr>
+      </table>
+      <p>
+        On par with functions it's important to indent any code that must run under the <span class="code">if</span>, <span class="code">else</span> and <span class="code">while</span> blocks.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 2, Lesson 5 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 2.5: Debugging</h2>
+  <div class="concept">
+    <h3>Science of debugging</h3>
+    <div class="concept-description">
+      <p>
+        Bugs are unavoidable and part of programming when developing reliable software, so we have to apply techniques to root out and systematically test for bugs in the code. Some bugs crash the program, some make it loop forever, while others are more tricky in that they don't show their malicious effect so obviously.<br>
+        There are various ways to test pieces of code for bugs (and expected behavior):
+      </p>
+      <ul>
+        <li>Examine the error message when  the code crashed.</li>
+        <li>Set the code aside and work on a copy of the code to explore new approaches.</li>
+        <li>Check for compatibility issues when using example code. Some Python v2 code won't work out of the box with Python v3 interpreter.</li>
+        <li>Insert print statements along the program flow to ensure the variables and outputs reads the expected values or hint at you what is going wrong.</li>
+        <li>Keep working versions of code so you can revert back to it for comparison if too many new bugs gets introduced on later versions.</li>
+      </ul>
+      <p>
+        Putting malfunctioning code aside is a very useful approach, which retains the first attempts at the code while enabling me to further develop on a copy of it. It's like branching off my original program and take it in new directions without losing my initial attempts. I can do this by copy-pasting my code to a new section and set the other copy aside by marking it as comment with the hash-sign (<span class="code">#</span>) or mark it as one big string enclosed by the triple-quotes (<span class="code">'''</span>). I could also duplicate the code into a whole new file and work on my new branch from there.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Modular code and systems thinking</h3>
+    <div class="concept-description">
+      <p>
+        Modular coding is about separating my raw data (course notes) from the code that produce the visual output (HTML and CSS code). This means I can alter my raw data at any time and easily have this reflected in the visual output by running it through the code modules to produce updated HTML again. This way I avoid digging through my HTML to do changes. It should also decrease the risk of introducing HTML bugs if I forget a tag or something in there.
+      </p>
+      <p>
+        Breaking down a large task into sub-tasks will allow me to focus on resolving sub-tasks individually and in the end, I can piece together the functions for each sub-task to crack the large task as a whole. The modules or functions that will eventually make up my program may already exist and I can thereby incorporate clever solutions developed by others. This is getting bigger than what my own limited brain can come up with. I like it!
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 2, Lesson 6 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 2.6: Structured Data: Lists &amp; For Loops</h2>
+  <div class="concept">
+    <h3>Lists</h3>
+    <div class="concept-description">
+      <p>
+        Lists seem similar to strings - and they are some of the way at least. They are structured collections of data which is assigned to the list variable the "usual" way with a single equals sign, like <span class="code">mylist = [1, 'John',[2.5,3,'Elvis']]</span>. Lists hold their elements in brackets and may contain numbers, strings and even other lists.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Accessing lists</h3>
+    <div class="concept-description">
+      <p>
+        The elements in a list can be accessed similarly to strings by pointing to the nested elements with index pointers. This makes it possible to access and slice list elements: <span class="code">print mylist[0]</span> or <span class="code">print mylist[1:]</span>. Elements of lists nested inside another list may also be accessed by pointing one layer deeper into the list, like <span class="code">print mylist[2][2]</span>.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Manipulating and mutating lists</h3>
+    <div class="concept-description">
+      <p>
+        Contents of lists can be changed by pointing to the index of the list and assigning a new value to replace what was there, like <span class="code">mylist[1] = 'McGyver'</span>. The other list elements are still the same and that particular element at position 1 is just replaced. The big difference between strings and lists here is that the list support mutation whereas strings are immutable. The meaning of this becomes clear when a list is assigned once more to a new variable, e.g. <span class="code">yourlist = mylist</span>. This is called aliasing as both variables refer to the same list and if I manipulate the list via one variable, it will affect the output I see when I look at the list via the other variable. This is very unlike how string variables act, because strings are not modified but instead completely replaced by a new string whenever it's manipulated by assignment.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>List operations</h3>
+    <div class="concept-description">
+      <p>
+        More methods are available to manipulate lists. One method is called <span class="code">append</span> and it's used by connecting the method to the list variable with a dot, like <span class="code">mylist.append(element)</span>. This method adds an element of any kind to an already defined list. If a list is appended to a list, the appended list will be nested inside the first list. The operator <span class="code">+</span> works on lists as well and will concatenate one list to another. It will not manipulate any of the elements in either list, just produce a list with the total amount of elements of both lists. The difference between <span class="code">.append</span> and <span class="code">+</span> operations is that <span class="code">+</span> merges the elements while <span class="code">.append</span> nests the appended element inside the list. <span class="code">+</span> operations will overwrite the variable with a new list, while <span class="code">.append</span> maintains the aliasing effect, so other variables pointing to the same list will also be affected. The method <span class="code">len(my_list)</span> is used to output the number of elements in a list.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Looping through lists</h3>
+    <div class="concept-description">
+      <p>
+        The <span class="code">while</span> loop can be used to loop through a list but it much less code to use a <span class="code">for</span> loop because it automatically determines the amount of elements in a list. Using the <span class="code">while</span> loop I would have to apply a variable as a counter and set a condition for the loop to make it break when the last list element was reached. All of this happens automatically with the <span class="code">for</span> loop.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Rummaging through lists</h3>
+    <div class="concept-description">
+      <p>
+        <span class="code">For</span> and <span class="code">while</span> loops are useful for flipping through the elements of lists, but when it comes to identifying the first occurrence of a value in a list there's a shorter way. It's done with the <span class="code">.index</span> operator: <span class="code">mylist.index(value)</span>. One potential drawback is that it returns an error and not -1 if the value was not found in the list. To overcome this, we can first check whether the value occurs in the list with the <span class="code">in</span> operator, e.g. <span class="code">if value in mylist</span> … etc. This will return <span class="code">True/False</span> depending on whether the value was contained in the list.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 2, Lesson 7 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 2.7: How to Solve Problems</h2>
+  <div class="concept">
+    <h3>Breaking it down – definitions and assumptions</h3>
+    <div class="concept-description">
+      <p>
+        First thing, make sure I understand the problem fully. Decide what are the exact inputs (how many and in what units) and what are the outputs required to solve the problem in question. Are there any assumptions that affect the inputs required?
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Defensive programming – debug, test</h3>
+    <div class="concept-description">
+      <p>
+        Assumptions make the code simpler and may affect the required inputs. To be safe when writing the code, I should build in checks along the way to validate that the inputs fed to my function is really of the order, size, limits, units, encoding and representation as assumed. Unexpected inputs could come from human input or bugs from elsewhere in the program.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Mapping inputs to correct outputs - understand</h3>
+    <div class="concept-description">
+      <p>
+        Next up is working out how the inputs can turn into the correct output by way of programming. Working out some examples will be a good way to see if I understand the problem well and may help me test edge or extreme cases for things I need my code to take into account later on. I'll list some examples on paper or in my head with given inputs to see if I understand what I want my program to output.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Solve the problem as a human – still no coding!?</h3>
+    <div class="concept-description">
+      <p>
+        To further ensure I understand the complexity of my coming code, I should perform some real life simulations of my program using my brain and real life things to find outputs from some test inputs. If I can understand what I want the program to do, I am much better off later on when finding algorithms and breaking the code down into smaller steps. I can write on paper some pseudo-code that in rough structure looks like Python code but paired with human language from how I solved the real life simulations. This will outline how the problem is solved when translated from human to Python language.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Simplify – computers are fast</h3>
+    <div class="concept-description">
+      <p>
+        It's just about time to start the actual coding, but first I have to think about how my pseudo-code may be simplified. My brain is limited in speed for solving certain types of problems, whereas a computer is not. I should consider resolving my problem the simplest possible way even though it's seemingly not the fastest. Python does not care about doing repetitive braindead calculations whereas my brain would be choose ways that would require quite complex coding. So select simple over fast. Optimizations can be done later and modern CPUs are blazing fast, so I may be looking at just a few milliseconds difference in processing time anyway.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Writing code – simple first</h3>
+    <div class="concept-description">
+      <p>
+        The coding can start and based on prior steps, I can work out what other helper functions may be required to do sub-steps for my routine. I will start out simple, adding only one supporting function at a time in the most logical order of necessity and immediately test if its direct functionality is as expected. I.e. I will write a test for the actual sub-routine / support function. I will build my code with focus on a simple backbone and adding the more complicated or specialized functionality later on. Make the guts of the routine working before adding complexity.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Correct code is progress – testing, testing</h3>
+    <div class="concept-description">
+      <p>
+        Writing small bits of code and testing often is the way to go. It's progress even if the problem is not yet resolved at this time. Don't optimize prematurely! Keep it simple and correct. Approximate results may be the way to go until fine-tuning is made later on. As long as it produce correct and expected results, it is progress.
+      </p>
+      <p>
+        Validation checks should be added as I go along and adding assertions with the <span class="code">assert &lt;Expression&gt;</span> statement is great for this. If the <span class="code">&lt;Expression&gt;</span> is <span class="code">False</span>, the statement breaks the routine with an exception. This is helpful for the programmer as it breaks and points to the line in the code where things went wrong.<br>
+        Universal guide to resolving all problems in the galaxy:
+      </p>
+      <ol start="0">
+        <li>Don't panic !</li>
+        <li>What are the inputs?</li>
+        <li>What are the outputs?</li>
+        <li>Work through some examples by hand</li>
+        <li>Simple mechanical solution</li>
+        <li>Develop incrementally and test as you go</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!-- Stage 2 learnings I got on top -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Bonus take-aways from Stage 2 lessons</h2>
+  <div class="concept">
+    <!-- Bonus learnings from Stage 2 -->
+    <h3>Bonus learning 1</h3>
+    <div class="concept-description">
+      <p>
+        I got a working programming environment of Python set up to work on my computer with Sublime Text. It took some reading on the web and following other people's advice before I got it set right, but now I have this cool 2-column set up with an output console at the bottom. This enables me with the press of a key shortcut to interpret and run my Python code and see the result immediately in the console. I can even grab the output from the console and paste it to my html code thanks to the 2-column set-up. This should come in handy!
+      </p>
+      <p>
+        <a href="/static/ST3.png" target="_blank"><img src="/static/ST3.png" alt="Screenshot of Sublime Text 3" class="screenshot"></a>
+      </p>
+    </div>
+  </div>
+  <!-- Bonus learnings from Stage 2 -->
+  <div class="concept">
+    <h3>Bonus learning 2</h3>
+    <div class="concept-description">
+      <p>
+        We're now up to three programming languages and of course also 3 different ways (well 4...) to add comments inside these :)
+      </p>
+      <p>
+        HTML comments must be enclosed in <span class="code">&lt;!--</span> <span class="code">--&gt;</span>, CSS comments are enclosed by <span class="code">/*</span> <span class="code">*/</span> and Python comments are marked with the hash-symbol <span class="code">#</span> and the rest of that line becomes comment. Another Python option is to enclose in docstrings (<span class="code">'''</span>) which enables comments to span several lines (not really comment but creates a string which is not processed by the interpreter).
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Bonus learning 3</h3>
+    <div class="concept-description">
+      <p>
+        I learned a neat and clean way to implement bug and functionality testing as I run my code using <span class="code">assert</span> statements in a separate test function. This makes it easy for me to turn on/off and adjust my testing as opposed to writing tests directly into the code here and there, e.g.:
+      </p>
+<pre>
+def test():
+  assert myFunc(1,2,3) == 6
+  assert myFunc2(1,2,3) == (3,2,1)
+  assert daysBetweenDates(2012,3,3,2012,3,3) == 0
+  print('Tests finished.')
+test()
+</pre>
+    </div>
+  </div>
+</div>
+{% endblock stage2 %}
+
+{% block stage3 %}
+<!-- Stage 3, Lesson 1 notes -->
+<div class="lesson">
+  <h2 class="addmargin">Lesson 3.1 Introduction to Abstraction</h2>
+  <div class="concept">
+    <h3>From idea to code</h3>
+    <div class="concept-description">
+      <p>
+        This session builds on my knowledge on if statements, loops and functions from the former sessions and will focus on turning ideas into code through new concepts. It will take me through a bunch of programs stepwise towards an understanding of the abstract idea of classes and objects. I will learn to make a program that tells someone to take a break from work, a program that discovers profane words in my text and a web based movie database. I am promised a friendly learning curve :-)
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 3, Lesson 2 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 3.2 Use Functions</h2>
+  <div class="concept">
+    <h3>Use web to find code and solutions</h3>
+    <div class="concept-description">
+      <p>
+        This session is about strengthening my knowledge of Python functions and it is built around writing programs from the level on an idea and turning those ideas into functions. There are numerous ways to get the job done but this session outlines routes with searching online for help to make those ideas a viable in code.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Take a break - import modules</h3>
+    <div class="concept-description">
+      <p>
+        First off was building a program that interrupts me every 2 hours so I can take a break from studying. I had to turn my idea into code that:
+      </p>
+      <ol>
+        <li>keeps track of time</li>
+        <li>waits for 2 hours</li>
+        <li>opens a browser</li>
+        <li>plays a video and then</li>
+        <li>loops 3 times</li>
+      </ol>
+      <p>
+        Additional Python modules beyond the standard modules available can be imported into my code by calling them, e.g. <span class="code">import time</span> where <span class="code">time</span> is the name of the module which functions I want to be available for use downstream in the code. The imported <span class="code">time</span> module contains functions that can be called using the syntax <span class="code">time.cdate()</span> – in this case calling the function <span class="code">cdate()</span> from the module <span class="code">time</span>. In the same way I can import a module called <span class="code">webbrowser</span> and call its <span class="code">open</span> function to have a video pop up and remind me to take a break: <span class="code">webbrowser.open('link')</span>.
+      </p>
+      <p>
+        A vast new world of functionality opens up this way and <em>Python Standard Library</em> is the go-to place for finding out more about modules and how to use them.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Abstraction</h3>
+    <div class="concept-description">
+      <p>
+        It is unknown to me as the user how Python's built-in functions actually do what they do. This <em>"abstraction"</em> is the hiding of the low-level functionality so I do not get to see how the functions work, I just know what they do and that they can be called from within the program. It enables the programmer to focus on writing the program on a more high-level language instead of having to deal with how the stuff gets executed at the lowest level in the interpreter.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Hidden message - filesystem fun and exceptions</h3>
+    <div class="concept-description">
+      <p>
+        Last part of the session applied same approach with online searching to help produce code that will rename several files in a folder based on a set of rules to produce new file names and in this way solve a hidden message. This called for importing the <span class="code">os</span> module and using some of its functions like <span class="code">os.listdir(path)</span>, <span class="code">os.chdir(path)</span> and <span class="code">os.rename(src,dst)</span>. We learned that if file handling meets an unforeseen event it is called and <em>Exception</em>, e.g. attempt to rename a file that does not exist or attempt to rename to a file that already exists (overwrite).
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 3, Lesson 3a notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 3.3a Use Classes- Draw Turtles</h2>
+  <div class="concept">
+    <h3>Classes with Turtle</h3>
+    <div class="concept-description">
+      <p>
+        Apparently, functions have their limits and therefore another concept called <em>Classes</em> is available in Python. The prior session ended on an attempt to build a movie database with functions and that proved unhandy.
+        The concept of Classes is introduced by learning to draw shapes with the <span class="code">turtle</span> module (lowercase t). Instead of containing a variety of functions inside, this module contains classes. The <span class="code">turtle</span> class is called <span class="code">Turtle</span> (uppercase T) which we can initiate and "clone" to as many <em>instances</em> (or <em>objects</em>) as we want, e.g. like this.: <span class="code">brad = turtle.Turtle()</span> or <span class="code">shelly = turtle.Turtle()</span> etc. The newly cloned instances of turtle, brad and shelly, have access to the exact same methods (class equivalent to functions) that are available within the <span class="code">Turtle</span> class. The class along with its methods inside thus serves as a sort of a blueprint for many similar objects or instances of itself.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Function vs class - __init()__</h3>
+    <div class="concept-description">
+      <p>
+        There is a certain difference between calling a function such as <span class="code">webbrowser.open()</span> and class such as <span class="code">turtle.Turtle()</span>. The first example (the function) is simply running the function <span class="code">open()</span> within the <span class="code">webbrowser</span> module. The second example (making an instance of the class) initiates a function called <span class="code">__init__()</span> inside the class <span class="code">Turtle()</span>. This reserves space for an instance or clone of the <span class="code">Turtle()</span> class with all it's contained functions.
+      </p>
+      <iframe width="690" height="400" src="https://www.youtube.com/embed/lB--nrwmGJ8" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<!-- Stage 3, Lesson 3b notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Session 3.3b Use Classes- Send Text</h2>
+  <div class="concept">
+    <h3>SMS from Python</h3>
+    <div class="concept-description">
+      <p>
+        The third party Python module Twilio can be used to send sms to phones. Twilio is installed to use with Python from the command prompt: <span class="code">pip install twilio</span>. Now this module and its functions and classes can be used. This time instead of importing the full twilio module and all its functions, we learned to import just the functions required for our code with the command <span class="code">from twilio import rest</span>. Unfortunately the free Twilio account did not support sms in Denmark so I was unable to test the Python code for sending messages to my phone.
+      </p>
+      <p>
+        The lesson quiz was quite useful:
+      </p>
+      <ul>
+        <li>What is a class?
+          <ul>
+            <li>I think of a class as a blueprint that can be cloned into instances of itself. The class is a piece of code stored inside a module or a .py file.</li>
+          </ul>
+        </li>
+        <li>What is an instance of a class?
+          <ul>
+            <li>An instance of a class is also referred to as an object. It's a copy of the blueprint that can do whatever was stored in the class.</li>
+          </ul>
+        </li>
+        <li>Thus far we have compared the class to a blueprint. Can you think of another analogy to explain classes and their instances?
+          <ul>
+            <li>The instance or object can be ssen as a clone of the class. All the individual clones that I create from the class (blueprint) inherit the same functionality that was imbedded within the parent class. I can send off my little clones to do stuff in my program and if I want to add functionality to my clones, I only have to change my class and the clones will automatically inherit those updates. It's a practical way to reduce repetition in the code. Another analogy could be to view the class as a factory that produces units that can do something special. All the units can do the same but they are individual and can have individual names.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Stage 3, Lesson 3c notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 3.3c Use Classes- Profanity Editor</h2>
+  <div class="concept">
+    <h3>Using website output</h3>
+    <div class="concept-description">
+      <p>
+        Since being used very frequently, the command <span class="code">open()</span> is not stored in the <span class="code">os</span> module but available as part of the Python Standard Library. It's a class that enables me to open files and read their contents. Likewise there is a method to open and read outputs from webpages using functions from the <span class="code">urllib.request</span> module. It turned out to be a bit harder than in the course example because the profanity webpage would not recognize the user agent that Python provides. I found a way to make it work online by changing the user agent with an instance of the <span class="code">FancyURLopener</span> class. Eventually I managed to use the returned webpage output to determine if my text contained any profane words.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 3, Lesson 4 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 3.4a Make Classes- Movie Website</h2>
+  <div class="concept">
+    <h3>Terminology and best practices</h3>
+    <div class="concept-description">
+      <p>
+        It is possible to make user created classes and it's good practice to keep such homemade classes in a separate file (equivalent to a module) although they can be incorporated in the main code. Saving classes to a separate file adheres to the way Python's built-in classes are stored and probably also makes them easier to share with others.
+      </p>
+      <p>
+        Great keywords so far:
+      </p>
+      <table id="t34a">
+        <tr>
+          <td style="width:150px">Library:</td>
+          <td style="width:550px">
+            Python has a Standard Library with an extensive amount of components ready to use with any standard Python installation. The library consist of modules for various purposes necessary to interact with file systems and performing standardized Python tasks. Additional library components may be included with various Python distributions or release versions or they can simply be imported separately if needed (e.g. from the Python Package Index repository).
+          </td>
+        </tr>
+        <tr>
+          <td>Module:</td>
+          <td>
+            A file containing Python definitions and statements that may be imported into other programs. An example module is turtle.py. Keeping definitions in separate modules can make code maintenance easier.
+          </td>
+        </tr>
+        <tr>
+          <td>Class:</td>
+          <td>A blueprint code that can be cloned as multiple instance of itself, e.g. <span class="code">Turtle()</span> or <span class="code">Movie()</span>.</td>
+        </tr>
+        <tr>
+          <td>Method:</td>
+          <td>
+            A function (or definition) that is part of a Class and thus will be executed as an Instance Method when initiated. Methods always take their first parameters/arguments of 'self', example:
+<pre>
+  class MyHelloClass:
+    def method(self):
+      return 'hello world'
+</pre>
+        </td>
+        </tr>
+        <tr>
+          <td>Instance/object:</td>
+          <td>An object or clone created from a class, e.g. <span class="code">shelly = turtle.Turtle()</span></td>
+        </tr>
+        <tr>
+          <td>Constructor:</td>
+          <td>An instance method that creates space for and initiates an instance of a class, typically a piece of code resembling a function: <span class="code">def __init__(self,args*):</span></td>
+        </tr>
+        <tr>
+          <td>Self:</td>
+          <td>Placeholder that points to the name of the class instance, e.g. 'shelly'. Although not a reserved Python keyword, it's best practice to use self in classes.</td>
+        </tr>
+        <tr>
+          <td>Instance Variable:</td>
+          <td>The unique variables that are kept within each instance of a class. This is among the things that the constructor creates space for.</td>
+        </tr>
+        <tr>
+          <td>Instance Method:</td>
+          <td>Any function within a class (or instance thereof) that has its first argument as self.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Stage 3, Lesson 4 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 3.4b Make Classes- Advanced Topics</h2>
+  <div class="concept">
+    <h3>Object Oriented Programming</h3>
+    <div class="concept-description">
+      <p>
+        An advanced idea in <em>object oriented programming (OOP)</em> is a thing like class variables – the special variables that are associated with all class instances. Each instance variable can be set to something different with each instance.
+      </p>
+      <p>
+        Another type of variable is the <em>class variable</em> which is a permanent or pre-set variable within the class. The programmer can include class variables by defining the variable in the root of the class, i.e. not inside any of the class methods. One pre-defined class variable is called <span class="code">__doc__</span> and it holds documentation for the class. It can be called from the class or any instance of it: <span class="code">print(turtle.Turtle.__doc__)</span> or <span class="code">print(turtle.shelly.__doc__)</span>. This variable is set in the class in a slightly different way than when defining the class/instance methods: It is set to the triple-quote string in the root of the class (has to be the first line inside the class – unless the first lines are comments).
+      </p>
+      <p>
+        Two other pre-defined class variables are <span class="code">__name__</span> and <span class="code">__module__</span>. The first one contains the name of the class that holds this variable. The latter contains the name of the module where the class is stored.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Inheritance - a fish analogy</h3>
+    <div class="concept-description">
+      <p>
+        The next big idea in OOP is <em>inheritance</em>. The analogy to inheritance in life is when a parent organism (class) passes down certain traits (attributes, instance variables, methods) to it's child (instance/object). This strategy is employed in code by calling a class with another class. This enables me to carry over and re-use code for instance variables and class methods which were already defined in the called class. This is inheritance from a class to a sub class. It's even allowable to add a method in the sub class of same name as within the class, but it will perform <em>Method Overriding</em> when called by the instance of that sub class.
+      </p>
+      <p>
+        The fish analogy illustrating OOP and inheritance:
+      </p>
+      <ul>
+        <li>What is the difference between a Fish and a Salmon?
+          <ul>
+             <li>a Salmon is a particular type of Fish so it's actually different from all other Fish</li>
+          </ul>
+        </li>
+        <li>A Salmon is named Mary. What is the difference between Mary and a Salmon?
+          <ul>
+            <li>Mary is a specific "instance" of a Salmon created from some other Salmon and now represent a real thing that has Salmon-like attributes</li>
+          </ul>
+        </li>
+        <li>Fish is a class (not a real thing), and Salmon is a class (a Fish class with more specific attributes), and Mary is an object (a real fish that is a kind of Salmon that is a kind of Fish)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Refactoring code</h3>
+    <div class="concept-description">
+      <p>
+        With this new knowledge in the bag, I am (theoretically :-) able to refactor my existing html generator code into an OOP version that relies more on a skeleton of classes and objects. A great benefit from refactoring my code into an OOP based approach whenever possible, is that it makes the code more logical for other OOP minded programmers and easier to use with their own code. It makes code easier to share (and steal) and use as independent packages along with other code.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>The value of OOP vs procedural method</h3>
+    <!-- Sources: http://math.hws.edu/javanotes/c1/s5.html and
+    http://searchsoa.techtarget.com/definition/object-oriented-programming -->
+    <div class="concept-description">
+      <p>
+        The "procedural" way of programming works well in certain projects. It may be the fastest and shortest way in terms of lines of code to solve a problem if it is of minor scale and if it is not required to work much with other external pieces of code. However, when resolving bigger problems and creating projects that require scalable functionality or interchangeability, the procedural method becomes too inflexible or unmanageable.
+      </p>
+      <p>
+        The OOP method in contrast provides modular code components and a blueprint or "factory" for mass producing objects each with their individual data sets and routines. This approach is good for large scale projects because it enables us to pick modular code snippets with a certain functionality and bring them into our code to solve certain parts of it. Our overall large-scale project can be broken into smaller bits that in turn gets replaced by these modular snippets, the classes, without having to know the exact inner workings of them. This enables the programmer to focus on building a backbone of objects and how they relate in his/her program instead of the logic behind them. We can label our objects with meaningful names in the context of the program and the OOP method thereby in several ways resembles how many things in real life work and therefore may be a helpful way to arrange code for better understanding by our human brains.
+      </p>
+      <p>
+        The fact that we can take other people's code in the form of classes and incorporate them into own code saves time because we don't have to invent, write and bug test the same code again if somebody already produced a class of good quality to perform some specific operations. The reusable nature of classes saves us from repetitive code. In addition, we can build new classes upon other classes and make the subclass inherit properties of the parent class and we can even grant new abilities to the subclasses. The class concept furthermore enables creation of new data type that is not already defined in the language itself.
+      </p>
+      <p>
+        These values of OOP are very powerful for creating structure in the code, reduce complexity, increase reusability of code thereby minimizing repetition and allowing for easy sharing and adaptation of software components amongst other programs of object-oriented nature.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Abstract thinking in OOP and relation to HTML and CSS</h3>
+    <!-- Sources: http://whatis.techtarget.com/definition/abstraction and
+    http://en.wikipedia.org/wiki/Abstraction_%28computer_science%29 -->
+    <div class="concept-description">
+      <p>
+        The idea of abstraction in OOP is that the underlying operations of objects are not necessarily known to the user. Of importance is to know the interface to the object – to know how to "communicate" with the object and what type of data it is able to produce or return. The object must advertise the type of data it can store and the available operations it can apply to manipulate the data. The rest can stay hidden to help reduce complexity. A real world analogy could be a radio, which can be manipulated with various buttons to produce sound at a certain volume etc. We don't have to know exactly how the radio produces this output, e.g. whether by use of transistors or vacuum tubes. This enables us to focus on resolving the problem at a higher level where we can regard objects as plug-ins or modular elements that can be grabbed and thrown into the program to fulfill certain parts of it. The internal workings of the class/object can later be optimized or changed without compromising how it interacts with the program that uses its operations as long as it still adheres to the agreed interface.
+      </p>
+      <p>
+        With html there is also a level of abstraction to the functionality that displays things on screen via the browser and e.g. how style sheets (css) are applied to the html code. It is adequate to know the basic functionality and rules of building the style sheet to be able to apply its effects inside one's own html. The html block attribute named "class" enables the user to point to and apply styles from a style sheet to block elements in the displayed webpage. Exactly how this works is not important to know. The important thing is to let the programmer focus on the high-level language instructions and structure that enables building of the desired page. Another similarity with html to OOP is the ability to call external files, hereunder scripts, css or other html files. This is almost like working with modules in Python as it likewise reduces repetition, enables the sharing of functionality and streamlines operations in larger projects.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 3 learnings I got on top -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Bonus take-aways from Stage 3 lessons</h2>
+  <div class="concept">
+    <!-- Bonus learnings from Stage 3 -->
+    <h3>Bonus learning 1</h3>
+    <div class="concept-description">
+      <p>
+        My Stage 2 reviewer had plenty of comments to the structure and adherence to styleguide. Going back and reading the Udacity styleguide at this stage greatly heightened my understanding and sense of structure in the html and css.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock stage3 %}
+
+{% block stage4 %}
+<!-- Stage 4, Lesson 1 notes -->
+<div class="lesson">
+  <h2 class="addmargin">Lesson 4.1 Introduction to networks</h2>
+  <div class="concept">
+    <h3>The connection of things</h3>
+    <div class="concept-description">
+      <p>
+        The goal is to learn about the internet (the network) and "server-side" programming and as a result produce a functioning interactive web application to share online.
+      </p>
+      <p>
+        Keywords:
+      </p>
+      <ul>
+        <li>
+          <b>Network</b> – a group of at least 3 entities that can communicate even if they are not directly connected
+        </li>
+        <li>
+          <b>Latency</b> – the time passed from a message being sent from the source until the destination starts receiving the message. Measured in ms or s typically
+        </li>
+        <li>
+          <b>Bandwidth</b> – the amount of information that can be transmitted over the network per unit of time, the rate. Measured in bps (bits per second) or Mbps
+        </li>
+        <li>
+          <b>Bit</b> – the smallest unit of information (in electronic devices). Represents a 0 or a 1 (on/off, yes/no)
+        </li>
+        <li>
+          <b>Protocol</b> – the set of rules that determine how entities can communicate. On the internet it's what enables client browsers to speak with servers. Examples of protocols are http and ftp for hypertext transfer and file transfer
+        </li>
+      </ul>
+      <p>
+        When we want to pass messages via a network there are some basic rules that needs to be taken into account for a network to be functional at all. The message must be recognized and understood, so there is a need for encoding and interpreting the messages. There must be a way to route the message in the right direction making sure it ends up at the desired destination. There also needs to be resourcing rules for deciding how simultaneous messages are handled to avoid mix up or loss of information, e.g. if several messages are being passed through the network at the same time.
+      </p>
+      <p>
+        A protocol has to be in place for a network to be successful because it makes the rules between the entities in the network on how communication is encoded, interpreted, routed, resourced etc.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 4, Lesson 2 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 4.2 – Make the Internet Work for You</h2>
+  <div class="concept">
+    <h3>Uniform Resource Locators</h3>
+    <div class="concept-description">
+      <p>
+        An URL or Uniform Resource Locator is the human readable location for an entity on the network, e.g. <a href="http://www.udacity.com/courses/all" target="_blank">http://www.udacity.com/courses/all</a>. An URL consists of 3 parts: Protocol, host and path separated by slashes. The protocol (first) part of the URL tells the client application which set of rules to use when communicating with other entities on the network, e.g. via the http or ftp protocol. The host (second) part of the URL is the unique name of an actual (physical) server or specific entity on the network and it also resolves to a numerical (non-practical for humans) address called the IP Internet Protocol address, e.g. 72.14.248.239. The remaining part of the URL is the path that points to a location within the host server or entity.
+      </p>
+      <p>
+        There's also a hidden part of the URL: The port. It's generally hidden because it's set to a default value for the protocol used (80 for http). If another port is used, this can be changed by adding it to the host address with a colon, e.g. <a href="http://localhost:8000" target="_blank"> http://localhost:8000.</a>
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>URL parameters</h3>
+    <div class="concept-description">
+      <p>
+        Browsers understand some basic parameters that can be applied with URLs. One is the <em>GET parameter</em> and it's added after the URL with a question mark (?) followed by any required data to feed to the GET request. This triggers an action in the browser where it interacts with the server to get some data delivered.
+      </p>
+      <p>
+        Another parameter is called a <em>fragment</em> and it is added after the URL with a hash sign (#). This does not trigger an interaction with the server but instead is processed within the browser on the webpage shown.
+      </p>
+      <p>
+        Fragments and queries can be called simultaneously with a URL and in that case the query is entered first.<br>
+        Example: <a href="http://toybox.com:8000/toys/cars.php?p=lambo#buyme" target="_blank">http://toybox.com:8000/toys/cars.php?p=lambo#buyme</a>
+      </p>
+      <table>
+        <tr>
+          <td style="width:150px">protocol:</td>
+          <td style="width:150px">http://</td>
+        </tr>
+        <tr>
+          <td>host:</td>
+          <td>toybox.com</td>
+        </tr>
+        <tr>
+          <td>port:</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td>path:</td>
+          <td>/toys/cars.php</td>
+        </tr>
+        <tr>
+          <td>query:</td>
+          <td>p=lambo</td>
+        </tr>
+        <tr>
+          <td>fragment:</td>
+          <td>buyme</td>
+        </tr>
+      </table>
+   </div>
+  </div>
+  <div class="concept">
+    <h3>Http interpretation</h3>
+    <div class="concept-description">
+      <p>
+        The http URL uses the host name to reach the destination entity on the network. When that location (server) is found, the browser sends an http request line to the server for execution: e.g. <span class="code">GET /toys/cars.php?p=lambo HTTP/1.1</span>. The host name needs not be included because the connection was already made to the host server before the request was sent. Therefore it's just the ´<em>relative</em> path on the server that is used to execute the request.
+      </p>
+      <p>
+        This is a parallel to html when calling external files with the href attribute of the &lt;link&gt; tag where relative paths are also used. If one mixes up absolute and relative paths, the result is often unexpected or nonfunctional.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Absolute and Relative paths</h3>
+    <div class="concept-description">
+      <p>
+        The isolated 'path' part of an URL is a string of folders and slashes and a filename which show the relative path to a file at the host address. The full URL is the absolute path pointing with one string to the exact host and location, while the isolated path part is the path relative to the host.
+      </p>
+      <p>
+        With html, css, scripts and Python it's important to keep in mind when an external call to a file or location requires an absolute or a relative path. This is relevant no matter if the path points to a file via a network protocol or file system path (e.g. <a href="http://toybox.com/toys/cars.php" target="_blank">http://toybox.com/toys/cars.php</a>, <span class="code">&lt;a href="cars.php"&gt;Click Me&lt;/a&gt;</span>, <span class="code">C:\python\foo.py</span>). Relative paths can even include the <span class="code">../</span> path part which tells the browser or file system to look in the folder one level higher than the current folder. So, with these absolute and relative linking methods come great flexibility, but if used incorrectly, the link or external call will not function as expected or may not work at all.
+      </p>
+      <p>
+        Absolute paths are required when linking to other websites, but is not recommended within one's own website. Instead, using relative links here is especially clever if one's domain (host) name changes because there will be no need to search and replace in all the webpages.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Http requests and http responses</h3>
+    <div class="concept-description">
+      <p>
+        Commonly used <em>methods</em> sent by a browser on the http protocol to request something of a server are the <span class="code">GET</span> and <span class="code">POST</span> methods. An http request line follows a specific syntax, e.g. <span class="code">GET /toys/cars.php?p=lambo HTTP/1.1</span> followed by headers. The headers all follow a set format: <span class="code">Name: value</span>. Some examples of http request headers are <span class="code">Host: www.toybox.com</span> and <span class="code">User-Agent: chrome v.17</span>.
+      </p>
+      <p>
+        When the server responds to a request, it does so with an http response line which also follows as certain syntax, e.g. <span class="code">HTTP/1.1 200 OK</span>. The number is a status code and it is followed by an English language reason phrase (always matching the status code). An http response line is likewise followed by headers in a <span class="code">Name: value</span> format, e.g.: <span class="code">Date: Mon Jul 2015 06:24:00 GMT</span>, <span class="code">Server: Apache /2.2.3</span>, <span class="code">Content-Type: text/html</span>.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Servers</h3>
+    <div class="concept-description">
+      <p>
+        Servers are computers running a server programs that responds to network requests such as http requests. Http servers will deliver either a <em>static</em> or a <em>dynamic</em> response depending on the content type requested. Static responses are made when pre-written files like an image is requested. Dynamic responses are made when a response is built on-the-fly by programs running on the server. Such server programs are called <em>web applications</em> and they generate content in the http language to deliver back to the browser making the dynamic request.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 4, Lesson 3 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 4.3 – Forms</h2>
+  <div class="concept">
+    <h3>Forms</h3>
+    <div class="concept-description">
+      <p>
+        Forms are all over the internet and are a general use as interface with the human user of a webpage. In html we can add forms with the <span class="code">&lt;form&gt; &lt;/form&gt;</span> tag. The tag itself does not do much but is a placeholder for input methods, e.g. by adding the <span class="code">&lt;input&gt;</span> tag in between the <span class="code">&lt;form&gt; &lt;/form&gt;</span> tags. The <span class="code">&lt;input&gt;</span> tag takes the parameter name which is used as a variable to hold the user input from the input box. It's handy to add a submit button with the <span class="code">&lt;input type="Submit"&gt;</span> inside the <span class="code">&lt;form&gt;</span> tags. Pressing enter Enter or clicking the submit button will submit the input as default to the webpage URL as a query with the <span class="code">?</span> followed by the input name variable with its user input. The code is simple:
+      </p>
+<pre>
+  &lt;form&gt;
+    &lt;input name="q"&gt;
+    &lt;input type="Submit"&gt;
+  &lt;/form&gt;
+</pre>
+      <p>
+        I'll try it out here. Watch the URL change above when you click submit:
+        <form>
+          <input type="hidden" name="p" value="stage4">
+          <input name="q" value={{ q }}>
+          <input type="Submit" value="Submit">
+        </form>
+      <p>
+        Fortunately this form data can be channeled elsewhere than just to the URL of the present webpage. By adding the <span class="code">action</span> parameter to the <span class="code">&lt;form&gt;</span> tag and specifying an output URL, the form input can be sent as requests to other webpages. Try Googling a favorite furry animal in this html form input box:
+        <form target="_blank" action="http://www.google.com/search">
+          <input type="text" name="q" value="Woolly mountain tapir">
+          <input type="Submit" value="Google">
+        </form>
+      </p>
+      <p>
+        Several form inputs can be added inside one <span class="code">&lt;form&gt;</span> tag and that will result in output of the accumulated responses to the form action URL as an URL query separating each input value by the ampersand &amp; character, e.g.: <a target="_blank" href="http://www.toybox.com/toys?q=testarossa&amp;r=lamborghini&amp;s=barbie">http://www.toybox.com/toys?q=testarossa&amp;r=lamborghini&amp;s=barbie</a>
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Form elements, input types and groups</h3>
+    <div class="concept-description">
+      <p>
+        The standard type for an input tag is text format, but this can be changed to provide variation on the ways to allow user input to the form. The input format type is set with the type parameter, e.g. <span class="code">type="text"</span>, <span class="code">type="password"</span>, <span class="code">type="checkbox"</span>, <span class="code">type="radio"</span>. All of input these types can be used in multiple inside a form element.
+      </p>
+      <p>
+        When several input boxes tags are used in a form they can be used to yield each their separate input result or they can be grouped so the user may select only one amongst a group of inputs. Grouping is simply performed by setting the <span class="code">name</span> parameter the same among the inputs in a group. E.g. the group behavior would be expected by most users for the radio button input type since only one of those buttons in a form should be selectable at a time. To be able to read the selection of the actual grouped form input selected by the user, a <span class="code">value</span> parameter has to be added to each <span class="code">&lt;input&gt;</span> tag. The content of the value parameter will be transferred to the <span class="code">&lt;form&gt;</span> element <span class="code">name</span> variable upon form submission.
+      </p>
+      <p>
+        To enable the user to recognize the function of one or more input areas in a form, we can embed an <span class="code">&lt;input&gt;</span> element inside a <span class="code">&lt;label&gt;</span> element.
+      </p>
+      <p>
+        One alternative to grouping inputs would be to give the user a set of choices from a dropdown menu. This is possible with the <span class="code">&lt;select name=&quot;q&quot;&gt; &lt;/select&gt;</span> element. Inside this element must be embedded as many <span class="code">&lt;option&gt;text&lt;/option&gt;</span> elements as choices wanted. The text part in between the opening and closing tags will be the choices visible to the user. The text value in the option element of the selected choice will be transferred to the <span class="code">&lt;form&gt;</span> element <span class="code">name</span> variable upon form submission as default. But the value can also be changed from the option text by applying a value parameter to the <span class="code">&lt;option&gt;</span> elements.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Google App Engine (GAE)</h3>
+    <div class="concept-description">
+      <p>
+        The Google App Engine SDK is a local server that installs to my computer and runs as a webserver service (for Windows in my case). With a simple piece of starter code and a basic configuration file it runs Python scripts and can just as well run several other programming languages. This seems like we're moving in on the concept of web applications mentioned earlier in this lesson when going over servers and their role on the network. GAE bridges the gap between using Python to generate html as learned in prior lessons and applying it on the server as a web application to generate dynamic content for a browser.
+      </p>
+      <p>
+        It's great that I can develop and locally host my own webpage this way for quick testing, but an even more mindblowing function of GAE is that it allows me to deploy my web application scripts for hosting on a cloud where others on the internet will be able to reach them day and night.
+      </p>
+      <p>
+        I should now be able to develop web applications on my computer, test them thoroughly locally and deploy them to the cloud when I'm satisfied. Well, hello, World!
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 4, Lesson 4 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 4.4 – Python Break-Modulus &amp; Dictionaries</h2>
+  <div class="concept">
+    <h3>Modulus Operator</h3>
+    <div class="concept-description">
+      <p>
+        A data operator written with the percent sign (<span class="code">&lt;number&gt; % &lt;modulus&gt;</span>) working on numbers.  It returns the remainder of the <span class="code">&lt;number&gt;</span> divided by the <span class="code">&lt;modulus&gt;</span>. If <span class="code">&lt;modulus&gt;</span> is greater than the <span class="code">&lt;number&gt;</span>, the operation returns the value <span class="code">&lt;number&gt;</span>.
+      </p>
+      <p>
+        A practical use for the modulus operator is to find out if a number is equal (<span class="code">&lt;number&gt; % 2 = 0</span>) or odd (<span class="code">&lt;number&gt; % 2 =! 0</span>). Other uses are clock arithmetics, cryptography algorithms and several other things I have no clue about at this point.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Dictionaries</h3>
+    <div class="concept-description">
+      <p>
+        A data structure as strings and lists but this time with a new structure. It can hold sets of key:value pairs enclosed in curly brackets, like <span class="code">d = {'a':1, 'b':2,'c':7}</span>. The elements must follow the <span class="code">{key:value, key:value, …}</span> format with keys being unique, i.e. if the same key occurs twice in a dictionary, it will overwrite the former. When printing out the contents of a dictionary they also may not be arranged in the same order as they were written to the dictionary. Keys in a dictionary can be numbers or strings. Values on the other hand are not limited and may be any data structure even lists and dictionaries.
+      </p>
+      <p>
+        When looking up an element with the index operation, like <span class="code">d['b']</span> it will return the value matching the key being looked up, e.g. for the above mentioned dictionary <span class="code">d['b']</span> would return the value 2. If looking up a key that does not exist in the dictionary, Python returns an error (<em>KeyError</em>).
+      </p>
+      <p>
+        Dictionaries are mutable (unlike strings, but like lists) meaning a value for any existing key in the dictionary may have it's corresponding value replaced using the index operation on the dictionary key. A new key:value pair can likewise be added with the index operation.
+      </p>
+      <p>
+        Summary of features of data structures learnt so far:
+      </p>
+      <table>
+        <tr>
+          <th style="width:250px">String</th>
+          <th style="width:250px">List</th>
+          <th style="width:250px">Dictionary</th>
+        </tr>
+        <tr>
+          <td>str = 'string'</td>
+          <td>lst = ['alpha', 123, ['beta', 345]]</td>
+          <td>dic = {'a':1, 'b':2,'c':7}</td>
+        </tr>
+        <tr>
+          <td>Sequence of characters enclosed in quotes</td>
+          <td>List of elements of any type enclosed in square brackets</td>
+          <td>Sets of key:value pairs enclosed in curly brackets</td>
+        </tr>
+        <tr>
+          <td>Immutable<br>str[2] = 'p' results in error</td>
+          <td>Mutable<br>lst[1] = 'aaa' is valid</td>
+          <td>Mutable<br>dic['c'] = 3 and d['d'] = 4 is valid</td>
+        </tr>
+        <tr>
+          <td>str[i] returns ith character in str</td>
+          <td>lst[i] returns ith element of lst</td>
+          <td>dic[k] returns paired value associated with key k in dic</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Stage 4, Lesson 5 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 4.5 – Working with App Engine</h2>
+  <div class="concept">
+    <h3>Using Google App Engine to output my html</h3>
+    <div class="concept-description">
+      <p>
+        With a little adaptation to the class code contained in the Google App Engine bootstrap Python file (e.g. helloworld.py) it is possible to make the browser output any html input to it. Commenting out or changing the Content-Type header to <span class="code">self.response.headers['Content-Type'] = 'text/html'</span> does the trick. Hereafter replacing the string in <span class="code">self.response.write('Hello world!')</span> with any variable that holds our html is the final step, e.g. <span class="code">self.response.write(html)</span>. From here on it's just a matter of feeding html to the variable and it will output nicely in the browser.
+      </p>
+      <p>
+        This is the bridge between learning about servers, http requests, html, css and coding Python that outputs html (i.e. Python as a webapp). My html is now easily produced and tested locally and with a click of a button deployed to an online cloud location available for the world. It seems a little complicated with the App Engine starter code (a Python class using <span class="code">webapp2</span> module) and a basic configuration file (app.yaml), but knowing how and where to inject my own code takes away the need to understand all of what is going on.
+      </p>
+   </div>
+  </div>
+  <div class="concept">
+    <h3>Request Handlers</h3>
+    <div class="concept-description">
+      <p>
+        The concept of <em>request handlers</em> or simply <em>handlers</em> is introduced briefly here. It seems awfully abstract. The handlers used in the code of this session are written as new classes inheriting from the <span class="code">webapp2.RequestHandler</span> class, so they extend the functionality of that class to the specific needs of one's own requests. Handlers are used by the server to catch a request (from a client browser to a server), manipulate data and create a (html) response to be returned to the requestor (client browser).
+      </p>
+      <p>
+        The handlers don't work alone, but go hand in hand with a WSGI application e.g. <span class="code">app = webapp2.WSGIApplication([('/', MainPage), ('/testform', TestHandler)],)</span>. When the application receives a http request to a path that matches what's defined in the WSGI application (here '/' or '/testform'), the handler (here MainPage or TestHandler) is started and the corresponding http method is called (e.g. the GET http request).
+      </p>
+   </div>
+  </div>
+  <div class="concept">
+    <h3>Method attribute</h3>
+    <div class="concept-description">
+      <p>
+        The method attribute can be specified for the html <span class="code">&lt;form&gt;</span> element. By default it is set to GET. When changed to POST the code will only work if there is a method for handling the POST request from the browser form. IF that is corrected, there is still a difference between the otherwise exact same GET request and POST request from the form. With the POST request, the form input parameters are stored in the body of the request header and no longer visible in the URL (like with GET request). Some differences between the two request methods:
+      </p>
+      <table>
+        <tr>
+          <th style="width:100px"></th>
+          <th style="width:325px">GET</th>
+          <th style="width:325px">POST</th>
+        </tr>
+        <tr>
+          <td>URL</td>
+          <td>http://localhost:8080/testform<span style="color: #fff">?q=Udacity</span></td>
+          <td>http://localhost:8080/testform</td>
+        </tr>
+        <tr>
+          <td>Request header</td>
+          <td>
+            GET /testform?q=Udacity HTTP/1.1<br>
+            Accept: text/html, application/xhtml+xml, */*<br>
+            Accept-Language: da-DK<br><br><br><br><br><br>
+            <span style="color: #fff">Content-Type: ; charset="utf-8"<br><br></span>
+            Cookie: _ga=GA1.1.1516330279.1422472062<br>
+            Dnt: 1<br>
+            Host: localhost:8080<br>
+            Referer: http://localhost:8080/<br>
+            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>
+            X-Appengine-Country: ZZ
+          </td>
+          <td>
+            POST /testform HTTP/1.1<br>
+            Accept: text/html, application/xhtml+xml, */*<br>
+            Accept-Language: da-DK<br>
+            <span style="color: #fff">Cache-Control: no-cache<br>
+            Content-Length: 15<br>
+            Content-Type: application/x-www-form-urlencoded; charset="utf-8"<br>
+            Content_Length: 15<br>
+            Content_Type: application/x-www-form-urlencoded<br></span>
+            Cookie: _ga=GA1.1.1516330279.1422472062<br>
+            Dnt: 1<br>
+            Host: localhost:8080<br>
+            Referer: http://localhost:8080/<br>
+            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>
+            X-Appengine-Country: ZZ<br>
+            <span style="color: #fff">q=Udacity</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Used for</td>
+          <td>Fetching documents from a server</td>
+          <td>Updating data on a server</td>
+        </tr>
+        <tr>
+          <td>URL length</td>
+          <td>Limited to a max length</td>
+          <td>Unlimited length</td>
+        </tr>
+        <tr>
+          <td>Cached</td>
+          <td>May be cached on nodes along the request route</td>
+          <td>Not cached because the method is used to change data on servers</td>
+        </tr>
+        <tr>
+          <td>Server changes</td>
+          <td>Should not be used to change the server data, only retrieve data</td>
+          <td>Allowed to change server data</td>
+        </tr>
+      </table>
+      <p>
+        Using GET to perform server changes is possible, but no recommended as it could result in uncontrolled deleted or overwritten data. As a rule of thumb whether it be Python, html, css etc., it seems that it's best to adhere to the accepted standards or there may be some unexpected results when sending my web page or Python code out into the world to interact with others.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 4, Lesson 6 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 4.6 – Validation</h2>
+  <div class="concept">
+    <h3>Validation of received form data</h3>
+    <div class="concept-description">
+      <p>
+        Validation is verification on the server side that only expected data is received. In the case of users submitting data via html forms, a defined set of input would always be expected. The server should not blindly process any data sent from such forms as they could be used maliciously to input large amounts of trash to slow down or break the server.
+      </p>
+      <p>
+        Various solutions exist to ensure the server is receiving only valid data. Offering the user only drop-down menu items or buttons would not suffice as a malicious user can always mimic a form input and send data that way anyway. The most effective way is to verify all received data for compliance with expected data formats.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Checking and responding to validation</h3>
+    <div class="concept-description">
+      <p>
+        In practice, what happens in a validated form interaction scenario is that:
+      </p>
+      <ol>
+        <li>User opens webpage making a GET request for the form at the server</li>
+        <li>Server responds with the form html data</li>
+        <li>User submits completed forms making a POST request to the server</li>
+        <li>Server runs validation functions</li>
+        <li>If data is good, server acknowledges receipt of data</li>
+        <li>If data is not validated, server sends back the form data for reentry along with an error message</li>
+      </ol>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>String substitution</h3>
+    <div class="concept-description">
+      <p>
+        A useful Python functionality: <span class="code">&quot;&lt;b&gt;%s and %s&lt;/b&gt;&quot; % (&quot;Pears&quot;, &quot;apples&quot;)</span> outputs the string <span class="code">&quot;&lt;b&gt;Pears and apples&lt;b&gt;&quot;</span>. The variables after the <span class="code">%</span> sign will replace the <span class="code">%s</span> placeholders one by one with the contents of the variables. The amounts of <span class="code">%s</span> placeholders have to match the amount of variables to have their contents inserted. It's a useful way to generate multiple strings with the least amount of repetitive coding.
+      </p>
+      <p>
+        String substitution can be done with just one variable, several variables and even by applying a dictionary to the string with <span class="code">%</span>, e.g: <span class="code">&quot;I'm %(name)s, but my friends call me %(nickname)s.&quot; % {&quot;name&quot;:&quot;Shelly&quot;, &quot;nickname&quot;:&quot;Turtle&quot;}</span>.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Optional parameters</h3>
+    <div class="concept-description">
+      <p>
+        When defining Python functions, it's possible to predefine a default value to the parameters. This is done already on the line where the function is defined and when a default value is set for a parameter, that parameter is no longer required when the function is called for it to work – it becomes optional due to the predefined default value. An example of a function with optional parameter: <span class="code">def yearIsValid(year,leapyear=False):</span> In this example the parameter leapyear becomes optional because it defaults to <span class="code">False</span> if not specified. The function may thus be called with just the year or with both parameters now without returning an error.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Preserving user input in forms</h3>
+    <div class="concept-description">
+      <p>
+        There is a form attribute called <span class="code">value</span> which set the default value in of a form. With a bit of code fiddling it can be used to repeat the latest entry of the form by using the string substitution method on the <span class="code">value</span> attribute: <span class="code">&lt;input type=&quot;text&quot; name=&quot;month&quot; value=&quot;%(month)s&quot;&gt;</span>. This calls for a step of string substitution on the html code before sending it to the browser, e.g. by applying the substitution code <span class="code">% month</span> to the html line. If a longer string of form input html code is processed, a string substitution using a dictionary of all the values should be applied to the html string, e.g. <span class="code">% {&quot;month&quot;:month,&quot;day&quot;:day,&quot;year&quot;:year}</span>.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Html input garbage and escaping</h3>
+    <div class="concept-description">
+      <p>
+        Using the method of string substitution to preserve form entries is useful to let users see and correct their wrong inputs. A side effect is that if a garbage string is entered, it may be able to mess of the output html if special characters are involved, especially the &quot;> combination that may result in an html closing tag ending too soon and allow the subsequently entered text to pass over to the output html. This open for vulnerabilities or just messing up of the form area.
+      </p>
+      <p>
+        A way to avoid special characters in form input messing up html is by applying html escape codes. This is done by processing the string of html and replacing specials characters with acceptable html code escape codes, that will not act like html in a browser, but be shown as the characters they represent. Examples:
+      </p>
+      <table>
+        <tr>
+          <td>Character</td>
+          <td>Escape code</td>
+        </tr>
+        <tr>
+          <td>&quot;</td>
+          <td>&amp;quot;</span></td>
+        </tr>
+        <tr>
+          <td>&amp;</td>
+          <td>&amp;amp;</td>
+        </tr>
+        <tr>
+          <td>&lt;</td>
+          <td>&amp;lt;</td>
+        </tr>
+        <tr>
+          <td>&gt;</td>
+          <td>&amp;gt;</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Redirect</h3>
+    <div class="concept-description">
+      <p>
+        When using POST for handling the form data submissions and success message, there are some resulting limitations: The link to the success message cannot be shared/linked to for later use and the page will only reload if user accepts an annoying confirmation message.
+      </p>
+      <p>
+        The resolution is to return a redirect to the browser instead of returning the success message. Then the user sees the redirect page with the success message instead.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 4, Lesson 7 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 4.7 HTML Templates</h2>
+  <div class="concept">
+    <h3>Templates</h3>
+    <div class="concept-description">
+      <p>
+        Writing Pyhon code and html strings combined in the GAE web app bootstrap file is doable, but it gets really inconvenient after just few lines of code. One major drawback is that writing two languages in one file takes away the useful code editor syntax highlighting. It gets unmanageable, difficult to make changes to without breaking functionality and even harder to debug. Trouble is that the bugs will only show up when the web app is run in the browser and the browser either gives unexpected output or returns a simple error neither of which is very helpful for locating the bugs in the code. An alternative is needed…
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Jinja</h3>
+    <div class="concept-description">
+      <p>
+        The way to go is by turning to templates (template libraries). This is a method for keeping Python code and html as separate as possible. The html goes into one or more template files that can be called from the main Python code. The library used for maximizing the template method here is Jinja2 (jinja.pocoo.org) which is built into GAE and can be installed to the local Python environment if needed (pip install Jinja2). Jinja will help render complicated html strings for use with the web app. It even has its own programming logic; This is the Jinja syntax for variable substitution: <span class="code">&#123;{ variable }&#125;</span>.
+      </p>
+      <p>
+        Jinja is made for rendering text in html format and the above code basically substitutes the value of the variable into the text at the location of those delimiters. When writing code in Jinja it is always enclosed between special delimiters like the above mentioned example. It also has a Statement syntax and delimiters for execution of simple operations like <span class="code">if-then-else</span> branching. The syntax is much like in Python but such <span class="code">&#123;% if condition %&#125;</span> statements must be ended with an <span class="code">&#123;% endif %&#125;</span> statement:
+      </p>
+      <table>
+        <tr>
+          <th>Jinja syntax</th>
+          <th>Code example</th>
+        </tr>
+        <tr>
+          <td>
+<pre>
+&#123;% statement %&#125;
+  Output
+&#123;% end statement %&#125;
+</pre>
+          </td>
+          <td>
+<pre>
+&#123;% if n == 1 %&#125;
+    n equals 1
+&#123;% else %&#125;
+    n does not equal 1
+&#123;% endif %&#125;
+</pre>
+          </td>
+        </tr>
+      </table>
+      <p>
+        Jinja also handles <span class="code">for</span> loops in that same type of statement syntax code:
+      </p>
+      <table>
+        <tr>
+          <th>Jinja syntax</th>
+          <th>Code example</th>
+        </tr>
+        <tr>
+          <td>
+<pre>
+&#123;% for statement %&#125;
+  body
+&#123;% end statement %&#125;
+</pre>
+          </td>
+          <td>
+<pre>
+&#123;% for x in range (1,n+1) %&#125;
+    &#123;{ x ** n }&#125;
+&#123;% endfor %&#125;
+</pre>
+          </td>
+        </tr>
+      </table>
+      <p>
+        It has a built in character escaping method that can be applied to individual variables with the piping symbol, e.g.: <span class="code">&#123;{ item | escape }&#125;</span> will substitute the value of variable <span class="code">item</span> and pipe it through the escape operation to ensure html special characters are converted to their respective escape codes.
+      </p>
+      <p>
+        The preferred and safer way to remember escaping is setting a jinja environment variable in the main code: <span class="code">autoescape = True</span>. When this is set, the escaping effect can instead be reversed for individual variables if wanted, e.g.: <span class="code">&#123;{ item | safe }&#125;</span>. This is a more secure procedure when building websites to avoid accidental oversight of security openings.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Template inheritance</h3>
+    <div class="concept-description">
+      <p>
+        So html templates are a benefit for keeping code and html separate, but there's even more to it. Websites are collections of html pages within the same host address and there's usually a uniform structure among all its pages, i.e. some elements like the header and footer sections are recurring through the site. This may give a nice impression to the user about a structured and thought-through site but another feat is that using templates for all the site's pages enables code reusability.
+      </p>
+      <p>
+        Jinja can reuse templates by inheritance of parent template elements to the child templates – much like classes, objects and their inheritance order. The Jinja parent and child templates go in the same folder and this way it's possible to define a parent template that can be extended by one or more child templates. A child template starts with <span class="code">&#123;% extends &quot;parent.html&quot; %&#125;</span> where <span class="code">parent</span> is the name of the parent html template (in same folder). Now sets of block delimiters can be used to enclose html indicating what html to share among parent and child templates:<br>
+        <span class="code">&#123;% block variable %&#125;<br>
+        …html…<br>
+        &#123;% endblock %&#125;</span>
+      </p>
+      <p>
+        Any such shared html block can now be called for use in related templates by calling the specific html block where <span class="code">variable</span> is any name for the block/child template content to insert:<br>
+        <span class="code">&#123;% block variable %&#125;<br>
+        &#123;% endblock %&#125;</span><br>
+      </p>
+      <p>
+        The navigation bar in the header of this page is created with use of such parent-child template inheritance, blocks and if-then branching with Jinja.
+      </p>
+    </div>
+  </div>
+    <div class="concept">
+    <h3>Benefits of templates with Jinja</h3>
+    <div class="concept-description">
+      <ul>
+        <li>Separate different types of  code (Python from html)</li>
+        <li>Maintain code editor syntax highlighting</li>
+        <li>Make code more readable</li>
+        <li>More secure websites</li>
+        <li>Html that is easier to modify</li>
+        <li>Template inheritance for html "plug-in" functionality and consistency across pages</li>
+        <li>Repeated html elements with simple Jinja syntax</li>
+        <li>Add conditionality of if-then-else branching with simple Jinja syntax</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Stage 4, Lesson 8 notes -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Lesson 4.8 Databases</h2>
+  <div class="concept">
+    <h3>Databases</h3>
+    <div class="concept-description">
+      <p>
+        A database is a program that can store and retrieve large amounts of structured data. It's typically run on one or several computers in relation to getting and putting server data for use with webapplications. So when a user browses to a website, the database for that site is may be called for retrieving some data required for building the page served back to the browser.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Tables</h3>
+    <div class="concept-description">
+      <p>
+        Database tables are structured as grids of columns and rows. Each row is a data set always containing a unique ID (unique for that particular table). The data types in columns can be data types such as integer, string, date. Structures of similar functionality of databases exist in Python but it can be tedious to search and sort in large lists or dictionaries for the wanted data with Python syntax.
+      </p>
+      <p>
+        E.g. querying a list of lists, tuples or dictionaries like <span class="code">lst = [[‘list 1', 2, 4, 1234], [‘list2', 6, 9, 4321], [‘list3', 7, 3, 9999]]</span> in Python is possible and contents can be sorted and/or returned with <span class="code">.sort()</span> or <span class="code">sorted()</span> functions. Deeper querying/sorting for other than the first sub-list parameter is possible with a parameter to the <span class="code">.sort()</span> function, <span class="code">lst.sort(key = lambda x: x.sub-parameter)</span>. But it gets complicated there and databases are easier for these purposes.
+      </p>
+      <p>
+        The real downsides of doing database query by hand in Python is that it's error-prone, requires tedious testing and is slow when dealing with thousands or millions of data sets.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Database types</h3>
+    <div class="concept-description">
+      <p>
+        Relational databases work with tables and use SQL language for data manipulation, examples are postgresql, MySQL, SQLite, Oracle. Other types of databases are Google App Engine Datastore, Amazon Dynamo, NoSQL. There are several  SQL type of databases for free and they are very widespread.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>SQL language</h3>
+    <div class="concept-description">
+      <p>
+        SQL is short for Structured Query Language and the language is used for manipulating the database contents. An example of a query for fetching data is <span class="code">SELECT * FROM links WHERE id=5</span>, which means get all columns from the links table with id=5.
+      </p>
+      <p>
+        More complicated queries can be executed as well, like <span class="code">SELECT * FROM links WHERE submitter_id=5 OR votes > 23</span> which finds all (*) entries in the table (links) for just the specified criteria (submitter_id and votes). Another one is <span class="code">SELECT * FROM links WHERE votes > 23 ORDER BY votes ASC</span> which finds all entries in the table by the specified criteria but orders the resulting list ascending.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Joins</h3>
+    <div class="concept-description">
+      <p>
+        A <em>join</em> is an SQL statement involving two tables where one of the tables is used as a lookup table for a value to use in querying the other table. The syntax is getting a bit complex now: <span class="code">SELECT links.* FROM links,users WHERE links.user_id=users.id AND users.name="somename"</span>. Alternatively a similar functionality can be reached by making two queries, one to each table and linking the results.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Indexes</h3>
+    <div class="concept-description">
+      <p>
+        ACID is a concept of properties that databases can adhere to a greater or lesser extent. Amongst different database types, these properties will vary and there will always be trade-offs.
+      </p>
+      <ul>
+        <li>Atomicity – all parts of a transaction succeed or fail together.
+          <ul>
+            <li>It's required to avoid some data gets written partially in case of a write failure in the database. Either data get stored as requested or nothing gets stored at all.</li>
+          </ul>
+        </li>
+        <li>Consistency – the database will always be consistent.
+          <ul>
+            <li>It ensures that multiple database tables or elements that are updated simultaneously will always be consistent at any time one of such correlated elements are read.</li>
+          </ul>
+        </li>
+        <li>Isolation – no transactions can interfere with another's.
+          <ul>
+            <li>It ensures that simultaneous writes to the database will not be able to interfere with other database values currently being written, e.g. by locking elements or ensuring writes get resolved one at a time.</li>
+          </ul>
+        </li>
+        <li>Durability – once the transaction is committed, it won't be lost.
+          <ul>
+            <li>This ensures that data successfully written to a database is also there after a crash or closing the database.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Google App Engine Datastore</h3>
+    <div class="concept-description">
+      <p>
+        GAE Datastore is a NoSQL type database provided by the GAE. In this database, tables are called entities. This means it does not store data in the Excel-like table format. Instead, its entities are rows of table data converted to objects. Each entity object has attributes matching what would be the table column headers.
+      </p>
+      <p>
+        In this database type the entities "float" independently of each other in contrast to a table type database where row are tied together in tables. A benefit of this organization type is that it allows for scaling to very large amounts of data while maintaining speed of access.
+      </p>
+        In Python, the GAE Datastore is imported for use with <span class="code">from google.appengine.ext import ndb</span>. A parent class is then defined with <span class="code">class Myclass(ndb.Model):</span> and database entities are hereafter created as objects of this class adding as many instance variables/attributes as wanted within each entity. Finally, the entities may be saved to the database with the <span class="code">Myentity.put()</span> function. When developing locally, the actual database will be stored in a file on the computer.
+      </p>
+      <p>
+        Querying data from the GAE Datastore is done from the class that was used to create the entities and the query may also be sorted on an instance attribute at the same time. The following pulls all entities from the Myclass database and orders them after the date attribute values: <span class="code">query = Myclass.query().order(Myclass.date)</span>. Next, individual entities can be fetched from the query and the output is a list, e.g. <span class="code">fetch_list = query.fetch(3)</span> which gets (up to) 3 entities from the query. From here, it's straightforward to pull single entities from the list, e.g. <span class="code">entity1 = fetch_list[0]</span>, and the entity's attributes can be pulled as well e.g. <span class="code">entity1_date = fetch_list[0].date</span>.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Stage 4 learnings I got on top -->
+<div class="lesson">
+  <a href="#top" class="addmargin toplink">Return to top</a>
+  <h2 class="addmargin">Bonus take-aways from Stage 4 lessons</h2>
+  <div class="concept">
+    <h3>Bonus learning 1</h3>
+    <div class="concept-description">
+      <p>
+        I noticed the use of arguments in the form of <span class="code">*</span>, <span class="code">*args</span> and <span class="code">**kwargs</span>. I had to dig deeper on my own to know what those did, which was useful. I learned that <span class="code">*args</span> is used to unpack ordered data structures like lists and tuples and pass them as arguments to a function. <span class="code">**kwargs</span> does the same but works with unordered data structures like dictionaries. Examples: <span class="code">print function(*my_tuple)</span> or <span class="code">print function(**my_dictionary)</span>.
+      </p>
+    </div>
+  </div>
+  <div class="concept">
+    <h3>Bonus learning 2</h3>
+    <div class="concept-description">
+      <p>
+        I learned more about GAE Datastore by watching the recorded IPND session by Mark and Luke which was extremely helpful. A great learning was also that a lot can be learned from the GAE logs when working with GAE and GAE Datastore. Adding Python <span class="code">print</span> lines within the GAE code classes will output to the GAE log making it an extremely useful way to do on-the-fly debugging, checking variable contents etc.
+    </div>
+  </div>
+</div>
+{% endblock%}

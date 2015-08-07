@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{# This file contains the submission material for the Udacity Nanodegree
+Introduction to Programming by Jes H.
+This is an extended Jinja template containing header functionality for
+selecting stage notes via navigation bar and a headline for the notes pages #}
+
+{% block header %}
+<div class="lesson" id="top">
+  <h2 class="addmargin">Udacity IPND and templates with Jinja2 by Jes H. - 2015</h2>
+  <ul class="navbar">
+    <li class="navbar"><a class="navbar" href="/">Home</a></li>
+    <li class="navbar"><a class="navbar" href="?p=stage1">Stage 1</a></li>
+    <li class="navbar"><a class="navbar" href="?p=stage2">Stage 2</a></li>
+    <li class="navbar"><a class="navbar" href="?p=stage3">Stage 3</a></li>
+    <li class="navbar"><a class="navbar" href="?p=stage4">Stage 4</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block headline %}
+<div class="coolheading">
+  Important Nanodegree Concepts
+</div>
+{% endblock %}
