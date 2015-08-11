@@ -6,9 +6,11 @@ This is the base Jinja template to be extended from by child templates #}
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Jes | Notes from Udacity Nanodegree Intro to Programming | Stages 1-4</title>
-  <link rel="stylesheet" href="/static/notes_style.css">
+  <title>Jes H. | Notes from Udacity IPND | Stages 1-4 | 2015</title>
   <link rel="shortcut icon" href="/static/favicon.ico">
+  {% block styles %}
+  <link rel="stylesheet" href="/static/notes_style.css">
+  {% endblock %}
   {% block header %}{% endblock %}
 </head>
 
@@ -17,9 +19,10 @@ This is the base Jinja template to be extended from by child templates #}
     <br>
     {% block headline %}{% endblock %}
 
+    {# Notes block will only appear when notes.html is called #}
     {% block html_stage %}{% endblock %}
 
-    {# FizzBuzz selection control #}
+    {# FizzBuzz selection control will show when f is set e.g. by menu choice #}
     {% if f == "fizzbuzz" %}
       <form>
         <h4>Give me a whole number:</h4>
@@ -32,6 +35,9 @@ This is the base Jinja template to be extended from by child templates #}
       {% block fizzbuzz %}{% endblock %}
     {% endif %}
   </div>
+
+  {# Wall/commenting block will show when wallbook.html is called #}
+  {% block wallbook %}{% endblock %}
 
   {# CSS validator tag #}
   <div align="right">

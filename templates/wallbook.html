@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/static/notes_style.css">
+  <link rel="stylesheet" href="/static/wall_style.css">
+{% endblock %}
+
+{% block header %}
+<div class="lesson" id="top">
+  <h2 class="addmargin">Udacity IPND and templates with Jinja2 by Jes H. - 2015</h2>
+  <ul class="navbar">
+    <li class="navbar"><a class="navbar" href="/">Home</a></li>
+    <li class="navbar"><a class="navbar" href="/notes?p=stage1">Stage 1</a></li>
+    <li class="navbar"><a class="navbar" href="/notes?p=stage2">Stage 2</a></li>
+    <li class="navbar"><a class="navbar" href="/notes?p=stage3">Stage 3</a></li>
+    <li class="navbar"><a class="navbar" href="/notes?p=stage4">Stage 4</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block headline %}
+<div class="coolheading">
+  Comments
+</div>
+{% endblock %}
+
+{% block wallbook %}
+<br>
+<div class="form-style-2">
+  <div class="form-style-2-heading">Thanks for providing feedback to my Udacity IPND notes</div>
+  <form action="" method="post">
+    <label for="user"><span>Your name <span class="required">*</span></span>
+      <input type="text" class="input-field" name="user" value="" />
+    </label>
+    <label for="wall"><span>Lesson</span>
+      <select name="wall" class="select-field">
+        <option value="General Question">{{ lesson }}</option>
+      </select>
+    </label>
+    <label for="comment"><span>Comment <span class="required">*</span></span>
+      <textarea name="comment" class="textarea-field"></textarea>
+    </label>
+    <label>
+      <span>&nbsp;</span><input type="submit" value="Submit" />
+    </label>
+  </form>
+</div>
+<!-- user comments start here -->
+{{ posts | safe }}
+{% endblock%}
