@@ -46,11 +46,16 @@ body {
 }
 
 .addmargin {
-  margin: 10px;
+  padding: 10px;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
 .toplink {
-  text-align: right;
+  float: left;
+}
+.commentlink {
+  float: right;
 }
 
 .thumbnail {

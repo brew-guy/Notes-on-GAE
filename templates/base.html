@@ -17,19 +17,7 @@ This is the base Jinja template to be extended from by child templates #}
     <br>
     {% block headline %}{% endblock %}
 
-    {# Notes selection control #}
-    {% if p == "stage1" %}
-      {% block stage1 %}{% endblock %}
-    {% endif %}
-    {% if p == "stage2" %}
-      {% block stage2 %}{% endblock %}
-    {% endif %}
-    {% if p == "stage3" %}
-      {% block stage3 %}{% endblock %}
-    {% endif %}
-    {% if p == "stage4" %}
-      {% block stage4 %}{% endblock %}
-    {% endif %}
+    {% block html_stage %}{% endblock %}
 
     {# FizzBuzz selection control #}
     {% if f == "fizzbuzz" %}

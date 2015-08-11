@@ -1,0 +1,123 @@
+{# This file contains the submission material for the Udacity Nanodegree
+Introduction to Programming by Jes H.
+This is a raw note file for use with Python and Jinja templates  #}
+// LESSON //
+Lesson 1.1: The Basics of the Web and HTML
+// CONCEPT //
+Webpages
+<p>
+  Text doc written using HTML – hypertext markup language.
+</p>
+// CONCEPT END //
+// CONCEPT //
+Coding
+<p>
+  Telling computers what to do in a language they understand – e.g. through HTML.
+</p>
+// CONCEPT END //
+// CONCEPT //
+Computers are stupid
+<p>
+  Coding in language with strict rules implies the computer that interprets is prone to misunderstand when the human coder makes errors. There's no "human factor" that understands the mistake and the computer act stupid when interpreting an error.
+</p>
+// CONCEPT END //
+// CONCEPT //
+Look it up
+<p>
+  Too much detail. No problem, focus on the larger ideas and look up the details (correct html tags etc.) on the internet.
+</p>
+// CONCEPT END //
+// CONCEPT //
+HTML lingo
+<p>
+  Tags (some require closing brackets, some don't), inline tags, block tags, void tags, elements, attributes.
+</p>
+// CONCEPT END //
+// CONCEPT //
+HTML structure
+<p>
+  Doctype, head (meta-data, <a target="_blank" href="http://www.w3.org/Style/CSS/">css</a>, <a target="_blank" href="http://www.w3schools.com/js/">javascript</a>), body (the fun stuff).
+</p>
+// CONCEPT END //
+// CONCEPT //
+Images
+<p>
+  Img tags are <img src="http://dbastatic.dk/pictures/pictures/52/5d/95e7-e7f7-4d80-bc74-12dfc60b09e2.jpg?preset=thumbnail" alt="Inliners. A-ha. A-hahaha :-|" class="thumbnail"> inline (as opposed to block elements like those defined with <span class="code">&lt;div&gt;</span> etc.)
+</p>
+// CONCEPT END //
+// LESSON //
+Lesson 1.2: Creating a Structured Document
+// CONCEPT //
+Structure, structure, structure
+<p>
+  HTML is the language that provides the backbone  of the webpage's content in a branched order - the so-called DOM or Document Object Model. This clever approach makes it highly adaptable in a controlled way by applying formatting to the backbone elements separately - namely via CSS. It enables me to apply a complete "style make-over" to collective parts of a webpage with minimum effort and time use.
+</p>
+// CONCEPT END //
+// CONCEPT //
+Styling
+<p>
+  On such a "style make-over" the outputted webpage looks different in the browser. The HTML (structure) remains unchanged while the CSS (style) changes and thus controls how the elements of the page appear on screen.
+</p>
+// CONCEPT END //
+// CONCEPT //
+Boxification
+<p>
+  It appears that all elements in HTML is contained in rectangular boxes - their dimensions and other parameters may be defined via separate styles. This is another clever part of HTML as it enables easy page adaptation to various screen sizes, browsers and digital platforms in general.<br>
+  Boxes are created in HTML with the <span class="code">&lt;div&gt;</span>-tag (but not around the <span class="code">&lt;span&gt;</span>-tag). A box inside a box is done by enclosing one <span class="code">&lt;div&gt;</span>-tag inside another. Clever! So when I break down a webpage as it looks in the browser and "read" the invisible "boxes", I can now copy-cat these "boxes" into my own HTML by building a hierarchy of <span class="code">&lt;div&gt;</span>-tags.
+</p>
+// CONCEPT END //
+// LESSON //
+Lesson 1.3: Adding CSS Style and HTML Structure
+// CONCEPT //
+The missing link
+<p>
+  Styling by CSS is linked to HTML elements by labeling the HTML elements (tags) with <code>class</code> (and <code>id</code>?) attributes. This must be the stuff that makes the magic happen.
+</p>
+// CONCEPT END //
+// CONCEPT //
+Cascading and inheritance
+<p>
+  HTML structure is DOM, and CSS is applied cascading throughout the DOM in turn dictating the order of the applied styling.  The CSS for my HTML page can be "called" or referenced into my HTML from a separately saved CSS file. It can also be written directly into the beginning of my HTML. I guess the latter is great for smaller projects while the former seems very useful for big projects with tons of HTML files all calling the same external CSS file.
+</p>
+<p>
+  CSS applied to an element is inherited to the descendants of that element, but there are differences in how e.g. text- and box-properties are inherited. This seems awesome and it all gets more logical and useful at this stage. There's just the thing about remembering all of this...
+</p>
+// CONCEPT END //
+// CONCEPT //
+Repetition
+<p>
+  Programming seems a lot about avoiding unnecessary repetition. CSS together with the inherent structures of HTML and CSS are very efficient at that. E.g. make one CSS file and call this from a bunch of HTML files to easy apply a uniform layout to all pages in no time. The rules of inheritance in CSS also helps programmers write less code because they can simply apply style to a higher-level or ancestor-level element.
+</p>
+// CONCEPT END //
+// LESSON //
+Bonus take-aways from Stage 1 lessons
+// CONCEPT //
+Bonus learning 1
+<p>
+  I learned how to make use of the browser's Developer Tool (source HTML+CSS) to "read" (mouse-over) HTML elements and see their respective boxes in real-time on screen. That was an eye-opener!
+</p>
+// CONCEPT END //
+// CONCEPT //
+Bonus learning 2
+<p>
+  The concept of keeping content and style separate seems to me somewhat similar to having unformatted text in MS Word with separate formatting applied in separate "Styles" templates, which likewise enables swift changing of a full Word document between various lay-outs (incl. colors schemes, line spacing, font, font size etc.).
+</p>
+// CONCEPT END //
+// CONCEPT //
+Bonus learning 3
+<p>
+  I learned how to set-up Sublime Text. I now have my own humble developer environment. Success! <span class="code">\(^_^)/</span> It was easy to make it recognize and color code HTML syntax but it took me a while to make it view my code in a browser with a click (Sublime Text 3 on Windows 8).
+</p>
+// CONCEPT END //
+// CONCEPT //
+Bonus learning 4
+<p>
+  There were links to very resourceful webpages I surely will be going back to often for help. <a target="_blank" href="http://stackoverflow.com/">Stackoverflow</a>, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web">MDN CSS and HTML reference</a>, <a target="_blank" href="https://css-tricks.com/how-css-selectors-work/">CSS-tricks</a>, <a target="_blank" href="http://validator.w3.org/#validate_by_input">W3C HTML Validation</a>.
+</p>
+// CONCEPT END //
+// CONCEPT //
+Say what?
+<p>
+  One of the earlier lessons made me fiddle with styles of some HTML- and CSS-generated circles. I don't understand what makes the circles circular, but hopefully that'll come...
+</p>
+// CONCEPT END //
