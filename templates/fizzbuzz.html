@@ -11,21 +11,25 @@ FizzBuzz functionality #}
 {% endblock %}
 
 {% block fizzbuzz %}
-<ol>
-  You chose: {{ p }}
-  <br><br>
-  {% for x in range (1, p+1) %}
-    <li>
-    {% if x % 15 == 0 %}
-      <span class="code">Fizbuzz</span>
-    {% elif x % 5 == 0 %}
-      <span class="code">Buzz</span>
-    {% elif x % 3 == 0 %}
-      <span class="code">Fizz</span>
-    {% else %}
-      {{ x }}
-    {% endif %}
-    </li>
-  {% endfor %}
-</ol>
+{% if p == '' %}
+  <br><span style="color: #ff6347"><b>Error:</b> Please type a positive integer.</span>
+{% else %}
+  <ol>
+    You chose: {{ p }}
+    <br><br>
+    {% for x in range (1, p+1) %}
+      <li>
+      {% if x % 15 == 0 %}
+        <span class="code">Fizbuzz</span>
+      {% elif x % 5 == 0 %}
+        <span class="code">Buzz</span>
+      {% elif x % 3 == 0 %}
+        <span class="code">Fizz</span>
+      {% else %}
+        {{ x }}
+      {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}
 {% endblock %}

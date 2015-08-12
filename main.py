@@ -74,7 +74,7 @@ class FizzBuzzHandler(Handler):
   def get(self):
     f = self.request.get('f')
     p = self.request.get('p', 0)
-    p = p and int(p)
+    p = p and abs(int(p))
     self.render('fizzbuzz.html', f = f, p = p)
 
 # DEFAULT_WALL = 'Public'
@@ -147,7 +147,7 @@ class WallPage(Handler):
       #   posts_html += '<div><h3>(You) ' + post.author.name + '</h3>\n'
       # else:
       posts_html += '<div><h4>On ' + str(post.date.strftime('%d-%b-%Y')) + ' ' + post.author.name + ' wrote:</h4>\n'
-      posts_html += '<blockquote>' + cgi.escape(post.content) + '</blockquote>\n'
+      posts_html += '<blockquote>' + post.content + '</blockquote>\n'
       posts_html += '</div>\n'
 
     sign_query_params = urllib.urlencode({'wall_lesson': wall_name})
