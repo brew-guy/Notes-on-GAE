@@ -33,13 +33,13 @@ commenting page #}
 <br>
 <div class="form-style-2">
   <div class="form-style-2-heading">Thanks for providing feedback to my Udacity IPND notes</div>
-  <form action="" method="post">
+  <form action="/sign?{{ params }}" method="post">
     <label for="user"><span>Your name <span class="required">*</span></span>
-      <input type="text" class="input-field" name="user" value="" />
+      <input type="text" class="input-field" name="user" value="{{ user }}" />
     </label>
-    <label for="wall"><span>Lesson</span>
-      <select name="wall" class="select-field">
-        <option value="General Question">{{ lesson }}</option>
+    <label for="wall_lesson"><span>Lesson</span>
+      <select name="wall_lesson" class="select-field">
+        <option>{{ lesson }}</option>
       </select>
     </label>
     <label for="comment"><span>Comment <span class="required">*</span></span>

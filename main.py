@@ -8,8 +8,6 @@
 #
 # TODO:
 # - get user from the post form input
-# - set wall name to lesson name, will it work?
-# - get commenting/posting to work generally - start out with wallbook alone?
 
 
 import cgi
@@ -79,14 +77,14 @@ class FizzBuzzHandler(Handler):
     p = p and int(p)
     self.render('fizzbuzz.html', f = f, p = p)
 
-DEFAULT_WALL = 'Public'
+# DEFAULT_WALL = 'Public'
 
 # Wall post/comment classes with Google App Engine Database
 # We set a parent key on the 'Post' to ensure that they are all
 # in the same entity group. Queries across the single entity group
 # will be consistent.  However, the write rate should be limited to
 # ~1/second.
-def wall_key(wall_name=DEFAULT_WALL):
+def wall_key(wall_name):
   """Constructs a Datastore key for a Wall entity.
   We use wall_name as the key.
   """
@@ -110,9 +108,9 @@ class Post(ndb.Model):
 class WallPage(Handler):
   def get(self):
     p = self.request.get('p','')
-    wall_name = self.request.get('lesson',DEFAULT_WALL)
+    wall_name = self.request.get('lesson')
     # wall_name = self.request.get('wall_name',DEFAULT_WALL)
-    if wall_name == DEFAULT_WALL.lower(): wall_name = DEFAULT_WALL
+    # if wall_name == DEFAULT_WALL.lower(): wall_name = DEFAULT_WALL
     # Ancestor Queries, as shown here, are strongly consistent
     # with the High Replication Datastore. Queries that span
     # entity groups are eventually consistent. If we omitted the
@@ -148,17 +146,17 @@ class WallPage(Handler):
       # if user and user.user_id() == post.author.identity:
       #   posts_html += '<div><h3>(You) ' + post.author.name + '</h3>\n'
       # else:
-      posts_html += '<div><h3>' + post.author.name + '</h3>\n'
-
-      posts_html += 'wrote: <blockquote>' + cgi.escape(post.content) + '</blockquote>\n'
+      posts_html += '<div><h4>On ' + str(post.date.strftime('%d-%b-%Y')) + ' ' + post.author.name + ' wrote:</h4>\n'
+      posts_html += '<blockquote>' + cgi.escape(post.content) + '</blockquote>\n'
       posts_html += '</div>\n'
 
-    # sign_query_params = urllib.urlencode({'wall_name': wall_name})
+    sign_query_params = urllib.urlencode({'wall_lesson': wall_name})
 
     # Write Out Page here
     self.render("wallbook.html",
                 p = p,
                 lesson = wall_name,
+                params = sign_query_params,
                 posts = posts_html)
 
 class PostWall(webapp2.RequestHandler):
@@ -168,7 +166,7 @@ class PostWall(webapp2.RequestHandler):
     # single entity group will be consistent. However, the write
     # rate to a single entity group should be limited to
     # ~1/second.
-    wall_name = self.request.get('lesson',DEFAULT_WALL)
+    wall_name = self.request.get('wall_lesson')
     post = Post(parent=wall_key(wall_name))
     user_name = self.request.get('user')
     # When the person is making the post, check to see whether the person
@@ -180,11 +178,11 @@ class PostWall(webapp2.RequestHandler):
     post.author = Author(name=user_name)
     # Get the content from our request parameters, in this case, the message
     # is in the parameter 'content'
-    post.content = self.request.get('content')
+    post.content = self.request.get('comment')
     # Write to the Google Database
     post.put()
     # Do other things here such as a page redirect
-    self.redirect('/comment?lesson=' + wall_name)
+    self.redirect('/comment?wall_name=' + wall_name)
 
 # Part of the Google App Engine code together with MainPage class. Recognizes
 # a certain path structure (e.g. '/') and uses the matching class for response.
@@ -192,6 +190,7 @@ app = webapp2.WSGIApplication([('/', MainPage),
                                ('/notes', NotesHandler),
                                ('/fizzbuzz', FizzBuzzHandler),
                                ('/comment', WallPage),
+                               ('/sign', PostWall),
                               ], debug=True)
 
 
