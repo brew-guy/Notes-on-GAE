@@ -9,6 +9,7 @@
 # TODO:
 # - get user from the post form input
 # - set wall name to lesson name, will it work?
+# - get commenting/posting to work generally - start out with wallbook alone?
 
 
 import cgi
@@ -152,7 +153,7 @@ class WallPage(Handler):
       posts_html += 'wrote: <blockquote>' + cgi.escape(post.content) + '</blockquote>\n'
       posts_html += '</div>\n'
 
-    sign_query_params = urllib.urlencode({'wall_name': wall_name})
+    # sign_query_params = urllib.urlencode({'wall_name': wall_name})
 
     # Write Out Page here
     self.render("wallbook.html",
@@ -169,17 +170,14 @@ class PostWall(webapp2.RequestHandler):
     # ~1/second.
     wall_name = self.request.get('lesson',DEFAULT_WALL)
     post = Post(parent=wall_key(wall_name))
+    user_name = self.request.get('user')
     # When the person is making the post, check to see whether the person
     # is logged into Google
-    if users.get_current_user():
-      post.author = Author(
-            # identity=users.get_current_user().user_id(),
-            name=users.get_current_user().nickname())
-            # email=users.get_current_user().email())
-    else:
-      post.author = Author(
-            name='A. Nonymous')
-            # email='anonymous@anonymous.com')
+    # if users.get_current_user():
+    #   post.author = Author(name=users.get_current_user().nickname())
+    # else:
+      # post.author = Author(name='A. Nonymous')
+    post.author = Author(name=user_name)
     # Get the content from our request parameters, in this case, the message
     # is in the parameter 'content'
     post.content = self.request.get('content')
@@ -195,6 +193,7 @@ app = webapp2.WSGIApplication([('/', MainPage),
                                ('/fizzbuzz', FizzBuzzHandler),
                                ('/comment', WallPage),
                               ], debug=True)
+
 
 # Helper functions to read raw stage note template and return list
 LESSON_KEY, CONCEPT_KEY, CONCEPT_END = '// LESSON //', '// CONCEPT //', '// CONCEPT END //'

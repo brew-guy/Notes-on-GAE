@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{# This file contains the submission material for the Udacity Nanodegree
+Introduction to Programming by Jes H.
+This is the extended Jinja template containing header functionality for
+selecting stage notes via navigation bar, a headline and functionality for
+commenting page #}
 
 {% block styles %}
   <link rel="stylesheet" href="/static/notes_style.css">
@@ -45,6 +50,6 @@
     </label>
   </form>
 </div>
-<!-- user comments start here -->
+<!-- user comments from GAE Databsase gets inserted down here -->
 {{ posts | safe }}
 {% endblock%}

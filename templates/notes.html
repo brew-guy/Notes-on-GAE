@@ -27,11 +27,11 @@ and stage note selection block unpacking lesson list and wrapping with html #}
 {# Unravels stage notes list with [[lesson,[concept,text],] structure
 and packs it in html #}
 {% block html_stage %}
-{% if p == "stage1" %}{% set stage = stage1 %}{% endif %}
-{% if p == "stage2" %}{% set stage = stage2 %}{% endif %}
-{% if p == "stage3" %}{% set stage = stage3 %}{% endif %}
-{% if p == "stage4" %}{% set stage = stage4 %}{% endif %}
-{% if p == "stage5" %}{% set stage = stage5 %}{% endif %}
+{% if p == "stage1" %}{% set stage = stage1 %}
+{% elif p == "stage2" %}{% set stage = stage2 %}
+{% elif p == "stage3" %}{% set stage = stage3 %}
+{% elif p == "stage4" %}{% set stage = stage4 %}
+{% elif p == "stage5" %}{% set stage = stage5 %}{% endif %}
 {% for lesson in stage %}
   {% set lesson_title = lesson[0] %}
   <div class="lesson">
