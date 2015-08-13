@@ -7,7 +7,7 @@ commenting page #}
 
 {% block styles %}
   <link rel="stylesheet" href="/static/notes_style.css">
-  <link rel="stylesheet" href="/static/wall_style.css">
+  <link rel="stylesheet" href="/static/comments_style.css">
 {% endblock %}
 
 {% block header %}
@@ -35,7 +35,7 @@ commenting page #}
   <div class="form-style-2-heading">Thanks for providing feedback to my Udacity IPND notes</div>
   <form action="/sign?{{ params }}" method="post">
     <label for="user"><span>Your name <span class="required">*</span></span>
-      <input type="text" class="input-field" name="user" value="{{ user }}" />
+      <input type="text" class="input-field" name="user" value="Anonymous" />
     </label>
     <label for="wall_lesson"><span>Lesson</span>
       <select name="wall_lesson" class="select-field">
