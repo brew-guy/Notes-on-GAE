@@ -2,7 +2,7 @@
 Introduction to Programming by Jes H.
 This is a raw note file for use with Python and Jinja templates  #}
 // LESSON //
-Lesson 4.1 Introduction to networks
+Lesson 4.1: Introduction to networks
 // CONCEPT //
 The connection of things
 <p>
@@ -36,7 +36,7 @@ The connection of things
 </p>
 // CONCEPT END //
 // LESSON //
-Lesson 4.2 – Make the Internet Work for You
+Lesson 4.2: Make the Internet Work for You
 // CONCEPT //
 Uniform Resource Locators
 <p>
@@ -122,7 +122,7 @@ Servers
 </p>
 // CONCEPT END //
 // LESSON //
-Lesson 4.3 – Forms
+Lesson 4.3: Forms
 // CONCEPT //
 Forms
 <p>
@@ -137,7 +137,7 @@ Forms
 <p>
   I'll try it out here. Watch the URL change above when you click submit:
   <form>
-    <input type="hidden" name="p" value="stage4">
+    <input type="hidden" name="page" value="stage4">
     <input name="q" value={{q}}>
     <input type="Submit" value="Submit">
   </form>
@@ -180,7 +180,7 @@ Google App Engine (GAE)
 </p>
 // CONCEPT END //
 // LESSON //
-Lesson 4.4 – Python Break-Modulus &amp; Dictionaries
+Lesson 4.4: Python Break-Modulus &amp; Dictionaries
 // CONCEPT //
 Modulus Operator
 <p>
@@ -193,7 +193,7 @@ Modulus Operator
 // CONCEPT //
 Dictionaries
 <p>
-  A data structure as strings and lists but this time with a new structure. It can hold sets of key:value pairs enclosed in curly brackets, like <span class="code">d = {'a':1, 'b':2,'c':7}</span>. The elements must follow the <span class="code">{key:value, key:value, …}</span> format with keys being unique, i.e. if the same key occurs twice in a dictionary, it will overwrite the former. When printing out the contents of a dictionary they also may not be arranged in the same order as they were written to the dictionary. Keys in a dictionary can be numbers or strings. Values on the other hand are not limited and may be any data structure even lists and dictionaries.
+  A data structure as strings and lists but this time with a new structure. It can hold sets of key:value pairs enclosed in curly brackets, like <span class="code">d = {'a':1, 'b':2,'c':7}</span>. The elements must follow the <span class="code">{key:value, key:value, ...}</span> format with keys being unique, i.e. if the same key occurs twice in a dictionary, it will overwrite the former. When printing out the contents of a dictionary they also may not be arranged in the same order as they were written to the dictionary. Keys in a dictionary can be numbers or strings. Values on the other hand are not limited and may be any data structure even lists and dictionaries.
 </p>
 <p>
   When looking up an element with the index operation, like <span class="code">d['b']</span> it will return the value matching the key being looked up, e.g. for the above mentioned dictionary <span class="code">d['b']</span> would return the value 2. If looking up a key that does not exist in the dictionary, Python returns an error (<em>KeyError</em>).
@@ -233,7 +233,7 @@ Dictionaries
 </table>
 // CONCEPT END //
 // LESSON //
-Lesson 4.5 – Working with App Engine
+Lesson 4.5: Working with App Engine
 // CONCEPT //
 Using Google App Engine to output my html
 <p>
@@ -326,7 +326,7 @@ Method attribute
 </p>
 // CONCEPT END //
 // LESSON //
-Lesson 4.6 – Validation
+Lesson 4.6: Validation
 // CONCEPT //
 Validation of received form data
 <p>
@@ -374,7 +374,7 @@ Preserving user input in forms
 // CONCEPT //
 Html input garbage and escaping
 <p>
-  Using the method of string substitution to preserve form entries is useful to let users see and correct their wrong inputs. A side effect is that if a garbage string is entered, it may be able to mess of the output html if special characters are involved, especially the &quot;> combination that may result in an html closing tag ending too soon and allow the subsequently entered text to pass over to the output html. This open for vulnerabilities or just messing up of the form area.
+  Using the method of string substitution to preserve form entries is useful to let users see and correct their wrong inputs. A side effect is that if a garbage string is entered, it may be able to mess of the output html if special characters are involved, especially the <span class="code">&quot;&gt;</span> combination that may result in an html closing tag ending too soon and allow the subsequently entered text to pass over to the output html. This open for vulnerabilities or just messing up of the form area.
 </p>
 <p>
   A way to avoid special characters in form input messing up html is by applying html escape codes. This is done by processing the string of html and replacing specials characters with acceptable html code escape codes, that will not act like html in a browser, but be shown as the characters they represent. Examples:
@@ -412,11 +412,11 @@ Redirect
 </p>
 // CONCEPT END //
 // LESSON //
-Lesson 4.7 HTML Templates
+Lesson 4.7: HTML Templates
 // CONCEPT //
 Templates
 <p>
-  Writing Pyhon code and html strings combined in the GAE web app bootstrap file is doable, but it gets really inconvenient after just few lines of code. One major drawback is that writing two languages in one file takes away the useful code editor syntax highlighting. It gets unmanageable, difficult to make changes to without breaking functionality and even harder to debug. Trouble is that the bugs will only show up when the web app is run in the browser and the browser either gives unexpected output or returns a simple error neither of which is very helpful for locating the bugs in the code. An alternative is needed…
+  Writing Pyhon code and html strings combined in the GAE web app bootstrap file is doable, but it gets really inconvenient after just few lines of code. One major drawback is that writing two languages in one file takes away the useful code editor syntax highlighting. It gets unmanageable, difficult to make changes to without breaking functionality and even harder to debug. Trouble is that the bugs will only show up when the web app is run in the browser and the browser either gives unexpected output or returns a simple error neither of which is very helpful for locating the bugs in the code. An alternative is needed...
 </p>
 // CONCEPT END //
 // CONCEPT //
@@ -482,6 +482,7 @@ Jinja
 <p>
   The preferred and safer way to remember escaping is setting a jinja environment variable in the main code: <span class="code">autoescape = True</span>. When this is set, the escaping effect can instead be reversed for individual variables if wanted, e.g.: <span class="code">&#123;{ item | safe }&#125;</span>. This is a more secure procedure when building websites to avoid accidental oversight of security openings.
 </p>
+// CONCEPT END //
 // CONCEPT //
 Template inheritance
 <p>
@@ -490,7 +491,7 @@ Template inheritance
 <p>
   Jinja can reuse templates by inheritance of parent template elements to the child templates – much like classes, objects and their inheritance order. The Jinja parent and child templates go in the same folder and this way it's possible to define a parent template that can be extended by one or more child templates. A child template starts with <span class="code">&#123;% extends &quot;parent.html&quot; %&#125;</span> where <span class="code">parent</span> is the name of the parent html template (in same folder). Now sets of block delimiters can be used to enclose html indicating what html to share among parent and child templates:<br>
   <span class="code">&#123;% block variable %&#125;<br>
-  …html…<br>
+  ...html...<br>
   &#123;% endblock %&#125;</span>
 </p>
 <p>
@@ -514,9 +515,15 @@ Benefits of templates with Jinja
   <li>Repeated html elements with simple Jinja syntax</li>
   <li>Add conditionality of if-then-else branching with simple Jinja syntax</li>
 </ul>
+<p>
+  Avoiding code repetition should be prioritized since the flexibility is greatest when code that performs a particular function is only written once. Every time code repeats, it takes longer to make corrections to that function and the code gets more error prone if the repeated passages are not aligned on updates. Low repetition minimizes the chance of bugs and eases locating them.
+</p>
+<p>
+  Jinja's has code inheritance between html templates. It also has built-in loops and decision branching with <span class="code">&#123;% for x in y %&#125;</span> and <span class="code">&#123;% if condition %&#125;</span> elements which helps keeping code repetition to a minimum. Jinja loops can be used to wrap various elements in highly repetitive elements like an html structure. In this course, Jinja is applied to wrap the course note lessons and concepts into the highly repeating <span class="code">&lt;div&gt;</span>, <span class="code">&lt;p&gt;</span>, etc. tag structure. The course note elements are inserted into the Jinja code by using string substitution on the Jinja code with the <span class="code">&#123;&#123; variable &#125;&#125;</span> element. All in all this greatly eases changes to the layout and takes up less lines of code, i.e. less to look through to find bugs.
+</p>
 // CONCEPT END //
 // LESSON //
-Lesson 4.8 Databases
+Lesson 4.8: Databases
 // CONCEPT //
 Databases
 <p>

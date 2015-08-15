@@ -15,10 +15,10 @@ commenting page #}
   <h2 class="addmargin">Udacity IPND and templates with Jinja2 by Jes H. - 2015</h2>
   <ul class="navbar">
     <li class="navbar"><a class="navbar" href="/">Home</a></li>
-    <li class="navbar"><a class="navbar" href="/notes?p=stage1">Stage 1</a></li>
-    <li class="navbar"><a class="navbar" href="/notes?p=stage2">Stage 2</a></li>
-    <li class="navbar"><a class="navbar" href="/notes?p=stage3">Stage 3</a></li>
-    <li class="navbar"><a class="navbar" href="/notes?p=stage4">Stage 4</a></li>
+    <li class="navbar"><a class="navbar" href="/notes?page=stage1">Stage 1</a></li>
+    <li class="navbar"><a class="navbar" href="/notes?page=stage2">Stage 2</a></li>
+    <li class="navbar"><a class="navbar" href="/notes?page=stage3">Stage 3</a></li>
+    <li class="navbar"><a class="navbar" href="/notes?page=stage4">Stage 4</a></li>
   </ul>
 </div>
 {% endblock %}
@@ -34,7 +34,7 @@ commenting page #}
 <div class="form-style-2">
   <div class="form-style-2-heading">Thanks for providing feedback to my Udacity IPND notes</div>
   <form action="/sign?{{ params }}" method="post">
-    <label for="user"><span>Your name <span class="required">*</span></span>
+    <label for="user"><span>Your name <span class="attention">*</span></span>
       <input type="text" class="input-field" name="user" value="Anonymous" />
     </label>
     <label for="wall_lesson"><span>Lesson</span>
@@ -42,14 +42,19 @@ commenting page #}
         <option>{{ lesson }}</option>
       </select>
     </label>
-    <label for="comment"><span>Comment <span class="required">*</span></span>
+    <label for="comment"><span>Comment <span class="attention">*</span></span>
       <textarea name="comment" class="textarea-field"></textarea>
     </label>
+    {% if error_message != '' %}
+    <label for="error"><span><span class="attention">Warnings:</span></span>
+      <textarea name="error" class="message-field attention" readonly>{{ error_message }}</textarea>
+    </label>
+    {% endif %}
     <label>
       <span>&nbsp;</span><input type="submit" value="Submit" />
     </label>
   </form>
 </div>
-<!-- user comments from GAE Databsase gets inserted down here -->
+<!-- user comments from GAE Datastore gets inserted down here -->
 {{ posts | safe }}
 {% endblock%}

@@ -22,15 +22,16 @@
     padding-top: 8px;
     padding-right: 5px;
 }
-.form-style-2 span.required{
+.form-style-2 .attention{
     color:red;
 }
 .form-style-2 input.input-field{
-    width: 48%;
+    width: 55%;
 }
 .form-style-2 input.input-field,
 .form-style-2 .textarea-field,
-.form-style-2 .select-field{
+.form-style-2 .select-field,
+.form-style-2 .message-field{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -46,11 +47,16 @@
 }
 .form-style-2 .input-field:focus,
 .form-style-2 .textarea-field:focus,
-.form-style-2 .select-field:focus{
+.form-style-2 .select-field:focus,
+.form-style-2 .message-field:focus{
     border: 1px solid #0c0;
 }
 .form-style-2 .textarea-field{
-    height:100px;
+    height: 100px;
+    width: 55%;
+}
+.form-style-2 .message-field{
+    height: 70px;
     width: 55%;
 }
 .form-style-2 input[type=submit],
