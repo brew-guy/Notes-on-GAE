@@ -16,9 +16,9 @@ Programming language
 </p>
 // CONCEPT END //
 // CONCEPT //
-Computer science – natural vs. programming languages
+Computer science - natural vs. programming languages
 <p>
-  Although computer science sounds equal to computer programming at first sight, it is not the same. Computer science has theoretical concepts to it that are not necessarily needed for programming. They do help understanding the background for why computers and programming languages are built as they are. Examples of theoretical concepts: Ambiguity – natural human languages are easily misinterpreted while programming languages are not. Verbosity – programming language can compactly describe the required details that would take long sentences to describe with natural languages. On the other hand, programming languages are less flexible and have to follow a set syntax strictly. Sentences in human language may contain errors and still be interpreted by other humans, while this would never work under a programming language syntax.
+  Although computer science sounds equal to computer programming at first sight, it is not the same. Computer science has theoretical concepts to it that are not necessarily needed for programming. They do help understanding the background for why computers and programming languages are built as they are. Examples of theoretical concepts: Ambiguity - natural human languages are easily misinterpreted while programming languages are not. Verbosity - programming language can compactly describe the required details that would take long sentences to describe with natural languages. On the other hand, programming languages are less flexible and have to follow a set syntax strictly. Sentences in human language may contain errors and still be interpreted by other humans, while this would never work under a programming language syntax.
 </p>
 // CONCEPT END //
 // CONCEPT //
@@ -33,7 +33,7 @@ Computer grammar - syntax and validity
 // LESSON //
 Lesson 2.2: Variables and Strings
 // CONCEPT //
-Code readability – the variable
+Code readability - the variable
 <ul>
   <li>What is a variable?
     <ul>
@@ -42,7 +42,7 @@ Code readability – the variable
   </li>
   <li>What does it mean to assign a value to a variable?
     <ul>
-      <li>A value is assigned to this name by writing an assignment statement in the form of 'Name = Expression'. The variable called Name hereafter contains/holds the Expression, so whenever referring to the variable in the code, the Python interpreter will actually use the value that is contained therein. A few simple rules for naming of variables apply – must start with a letter or an underscore. It greatly increases code readability to assign values to cleverly named variables.</li>
+      <li>A value is assigned to this name by writing an assignment statement in the form of 'Name = Expression'. The variable called Name hereafter contains/holds the Expression, so whenever referring to the variable in the code, the Python interpreter will actually use the value that is contained therein. A few simple rules for naming of variables apply - must start with a letter or an underscore. It greatly increases code readability to assign values to cleverly named variables.</li>
     </ul>
   </li>
   <li>What is the difference between what the equals = means in math versus in programming. What's the difference between this: <span class="code">2 + 3 = 5</span> and this: <span class="code">my_variable = 5</span>?
@@ -105,7 +105,7 @@ Functions
   Also referred to as <em>procedures</em>. They are separate pieces of code that will not run until called from the main program. Functions can take <em>parameters</em> for <u>input</u> such as strings and expressions which may then be processed by the function to create the return value or <u>output</u> of the function. Functions are <u>created</u> or defined with the syntax <span class="code">def function_name(arg1,arg2…etc.):</span> and the function will output a result when a <span class="code">return</span> command is reached inside the function's code. It appears that space indentation of all subsequent lines of code after <span class="code">def</span> is important. When indentation is back to 0 again the function ends. A function does not need a <span class="code">return</span> statement to be functional, but it will not produce an output if a <span class="code">return</span> is not included! To <u>call or use</u> the function defined, it must be called from the main code by writing its name and giving the exact required amount of arguments, e.g. <span class="code">print function_name("Count to three", 3)</span>. What happens upon calling a function from the main code is that whatever arguments ("Count to three", 3) are passed to the function will be assigned to the argument variables (<em>arg1, arg2</em>) of the function. Variables used inside function code are not shared or overlapping with variables used in the main code.
 </p>
 <p>
-  Functions seems to work like a sort of new Python command that I added to the common "dictionary" of known Python commands but I can use my function only when it's defined in my program. Since functions work like any other Python command, they fit nicely into the syntax. I can call a function and use its output with any other command. I can even nest one call to a function as a parameter for another function – procedure composition. All this functionality of functions is highly usable in terms of avoiding repetitions because it automates processing of data following a controlled set of instructions and at the same time allows for endless variations on the input fed to the function. Functions sapre the programmer of repeating the same set of instructions over and over in his/her code.
+  Functions seems to work like a sort of new Python command that I added to the common "dictionary" of known Python commands but I can use my function only when it's defined in my program. Since functions work like any other Python command, they fit nicely into the syntax. I can call a function and use its output with any other command. I can even nest one call to a function as a parameter for another function - procedure composition. All this functionality of functions is highly usable in terms of avoiding repetitions because it automates processing of data following a controlled set of instructions and at the same time allows for endless variations on the input fed to the function. Functions sapre the programmer of repeating the same set of instructions over and over in his/her code.
 </p>
 // CONCEPT END //
 // LESSON //
@@ -116,7 +116,7 @@ Making decision
   <em>Comparison</em> operators (or Boolean operators) in Python are <span class="code">&lt;</span>, <span class="code">&gt;</span>, <span class="code">==</span>, <span class="code">!=</span>, <span class="code">&lt;&gt;</span>, <span class="code">&lt;=</span>, <span class="code">&gt;=</span> are used to compare values and variables. We need a double equal (<span class="code">==</span>) for Boolean comparisons because the single equal (<span class="code">=</span>) means <em>assignment</em> in Python. Two or more comparisons can be evaluated in succession with the <span class="code">or</span>, <span class="code">and</span>, <span class="code">not</span> <em>logical</em> operators. The output of a Boolean comparison is a <span class="code">True</span> or <span class="code">False</span> return code that can be used to make a decision about the further flow of the program. This is done by applying the <span class="code">if</span> and <span class="code">else</span> commands to the result of the decision result.
 </p>
 <p>
-  Another useful way to exploit Boolean comparison is creating a loop with the <span class="code">while</span> command which makes the same code run over and over until the test expression returns a <span class="code">False</span>. The variable tested should probably change during the loops or the test may never return <span class="code">False</span> causing the <span class="code">while</span> loop to never end – it could be desired but would call for a break of the program somehow else. Breaking an infinite <span class="code">while</span> loop or breaking the loop before the test expression evaluates to <span class="code">False</span> can be done with the <span class="code">break</span> command.
+  Another useful way to exploit Boolean comparison is creating a loop with the <span class="code">while</span> command which makes the same code run over and over until the test expression returns a <span class="code">False</span>. The variable tested should probably change during the loops or the test may never return <span class="code">False</span> causing the <span class="code">while</span> loop to never end - it could be desired but would call for a break of the program somehow else. Breaking an infinite <span class="code">while</span> loop or breaking the loop before the test expression evaluates to <span class="code">False</span> can be done with the <span class="code">break</span> command.
 </p>
 <p>
   On par with functions it's important to indent any code that must run under the <span class="code">if</span>, <span class="code">else</span> and <span class="code">while</span> blocks.
@@ -241,13 +241,13 @@ Rummaging through lists
 // LESSON //
 Lesson 2.7: How to Solve Problems
 // CONCEPT //
-Breaking it down – definitions and assumptions
+Breaking it down - definitions and assumptions
 <p>
   First thing, make sure I understand the problem fully. Decide what are the exact inputs (how many and in what units) and what are the outputs required to solve the problem in question. Are there any assumptions that affect the inputs required?
 </p>
 // CONCEPT END //
 // CONCEPT //
-Defensive programming – debug, test
+Defensive programming - debug, test
 <p>
   Assumptions make the code simpler and may affect the required inputs. To be safe when writing the code, I should build in checks along the way to validate that the inputs fed to my function is really of the order, size, limits, units, encoding and representation as assumed. Unexpected inputs could come from human input or bugs from elsewhere in the program.
 </p>
@@ -259,25 +259,25 @@ Mapping inputs to correct outputs - understand
 </p>
 // CONCEPT END //
 // CONCEPT //
-Solve the problem as a human – still no coding!?
+Solve the problem as a human - still no coding!?
 <p>
   To further ensure I understand the complexity of my coming code, I should perform some real life simulations of my program using my brain and real life things to find outputs from some test inputs. If I can understand what I want the program to do, I am much better off later on when finding algorithms and breaking the code down into smaller steps. I can write on paper some pseudo-code that in rough structure looks like Python code but paired with human language from how I solved the real life simulations. This will outline how the problem is solved when translated from human to Python language.
 </p>
 // CONCEPT END //
 // CONCEPT //
-Simplify – computers are fast
+Simplify - computers are fast
 <p>
   It's just about time to start the actual coding, but first I have to think about how my pseudo-code may be simplified. My brain is limited in speed for solving certain types of problems, whereas a computer is not. I should consider resolving my problem the simplest possible way even though it's seemingly not the fastest. Python does not care about doing repetitive braindead calculations whereas my brain would be choose ways that would require quite complex coding. So select simple over fast. Optimizations can be done later and modern CPUs are blazing fast, so I may be looking at just a few milliseconds difference in processing time anyway.
 </p>
 // CONCEPT END //
 // CONCEPT //
-Writing code – simple first
+Writing code - simple first
 <p>
   The coding can start and based on prior steps, I can work out what other helper functions may be required to do sub-steps for my routine. I will start out simple, adding only one supporting function at a time in the most logical order of necessity and immediately test if its direct functionality is as expected. I.e. I will write a test for the actual sub-routine / support function. I will build my code with focus on a simple backbone and adding the more complicated or specialized functionality later on. Make the guts of the routine working before adding complexity.
 </p>
 // CONCEPT END //
 // CONCEPT //
-Correct code is progress – testing, testing
+Correct code is progress - testing, testing
 <p>
   Writing small bits of code and testing often is the way to go. It's progress even if the problem is not yet resolved at this time. Don't optimize prematurely! Keep it simple and correct. Approximate results may be the way to go until fine-tuning is made later on. As long as it produce correct and expected results, it is progress.
 </p>

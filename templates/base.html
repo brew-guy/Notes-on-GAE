@@ -5,39 +5,39 @@ This is the base Jinja template to be extended from by child templates #}
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Jes H. | Notes from Udacity IPND | Stages 1-4 | 2015</title>
-  <link rel="shortcut icon" href="/static/favicon.ico">
-  {% block styles %}
-  <link rel="stylesheet" href="/static/notes_style.css">
-  {% endblock %}
-  {% block header %}{% endblock %}
+	<meta charset="utf-8">
+	<title>Jes H. | Notes from Udacity IPND | Stages 1-4 | 2015</title>
+	<link rel="shortcut icon" href="/static/favicon.ico">
+	{% block styles %}
+	<link rel="stylesheet" href="/static/notes_style.css">
+	{% endblock %}
+	{% block header %}{% endblock %}
 </head>
 
 <body>
-  <div>
-    <br>
-    {% block headline %}{% endblock %}
+	<div>
+		<br>
+		{% block headline %}{% endblock %}
 
-    {# Notes block will only appear when notes.html is rendered #}
-    {% block html_stage %}{% endblock %}
+		{# Notes block will only appear when notes.html is rendered #}
+		{% block html_stage %}{% endblock %}
 
-    {# FizzBuzz selection control will show when fizzbuzz page is selected #}
-    {% block fizzbuzz %}{% endblock %}
+		{# FizzBuzz selection control will show when fizzbuzz page is selected #}
+		{% block fizzbuzz %}{% endblock %}
 
-    {# Wall/commenting block will show when wallbook.html is rendered #}
-    {% block wallbook %}{% endblock %}
-  </div>
+		{# Wall/commenting block will show when wallbook.html is rendered #}
+		{% block wallbook %}{% endblock %}
+	</div>
 
-  {# CSS validator tag #}
-  <div align="right">
-    <p>
-      <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-            alt="Valid CSS!"/>
-      </a>
-    </p>
-  </div>
+	{# CSS validator tag #}
+	<div align="right">
+		<p>
+			<a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img style="border:0;width:88px;height:31px"
+						src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+						alt="Valid CSS!"/>
+			</a>
+		</p>
+	</div>
 </body>
 </html>
